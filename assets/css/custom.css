@@ -130,9 +130,9 @@ button:hover {
   margin-top: 6rem !important;
 }
 
-.quiz-heading {
+/* .quiz-heading {
   margin-bottom: 10px !important;
-}
+} */
 
 .quiz-sub-heading {
   margin: 0 !important;
@@ -155,17 +155,26 @@ button:hover {
   }
 }
 
-@media (max-width: 570px) {
+@media (max-width: 770px) {
+  .pagination-btns {
+    margin-top: 9rem !important;
+  }
+}
+
+@media (max-width: 580px) {
   .question {
     font-size: 24px !important;
   }
   .pagination-btns {
-    padding-top: 10px;
+    padding-top: 5rem;
   }
 }
 
-@media (max-width: 399px) {
+@media (max-width: 410px) {
   #tel-ost > a > h3 {
     font-size: 15px;
+  }
+  .pagination-btns {
+    padding-top: 8rem;
   }
 }
