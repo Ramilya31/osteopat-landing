@@ -68,7 +68,7 @@ async function handleSubmit(e) {
 
         // add this question and its answers to the output
         output.push(
-          `<div class="slide">
+          `<div class="slide" style="margin-bottom: 100px;">
             <div class="quiz-heading">${currentQuestion.heading}</div>
             <pre class="quiz-sub-heading">${currentQuestion.subHeading}</pre>
             <div class="question"> ${currentQuestion.question}</div>
@@ -718,6 +718,7 @@ async function handleSubmit(e) {
     {
       heading: `АНКЕТА 3. \n Для ребёнка младшего возраста. (от 24 или 30 месяцев до 5 лет). \n Перед тем как ответить на вопросы этой анкеты, ответьте на вопросы предыдущей анкеты, даже если ваш ребёнок вырос. Постарайтесь восстановить по памяти его поведение. \n В тот момент, когда ребёнок полностью расслаблен и не плачет, вы кладёте ему руку на животик и обнаруживаете, что живот чрезмерно напряжён. \n Даже если ваш ребёнок вышел из грудного возраста, вы сможете найти некоторые сигналы тревоги, оставшиеся ранее не замеченными. На Анкету 2 следует ответить, чтобы лучше понимать вопросы Анкеты 3`,
       subHeading: "",
+      id: "long-text",
       question: "",
       // answers: {
       //   w3: "Да",

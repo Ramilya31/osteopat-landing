@@ -65,7 +65,7 @@ body {
   display: block;
   margin-bottom: 10px;
 }
-button {
+.pagin-btn {
   font-family: "Work Sans", sans-serif;
   font-size: 22px;
   background-color: #279;
@@ -130,9 +130,9 @@ button:hover {
   margin-top: 6rem !important;
 }
 
-/* .quiz-heading {
+.quiz-heading {
   margin-bottom: 10px !important;
-} */
+}
 
 .quiz-sub-heading {
   margin: 0 !important;
@@ -155,26 +155,17 @@ button:hover {
   }
 }
 
-@media (max-width: 770px) {
-  .pagination-btns {
-    margin-top: 9rem !important;
-  }
-}
-
-@media (max-width: 580px) {
+@media (max-width: 570px) {
   .question {
-    font-size: 24px !important;
+    font-size: 20px !important;
   }
   .pagination-btns {
-    padding-top: 5rem;
+    padding-top: 10px;
   }
 }
 
-@media (max-width: 410px) {
+@media (max-width: 399px) {
   #tel-ost > a > h3 {
     font-size: 15px;
-  }
-  .pagination-btns {
-    padding-top: 8rem;
   }
 }
