@@ -99,6 +99,11 @@ button:hover {
   margin-top: 40px;
 }
 
+pre {
+  white-space: pre-wrap;
+  /* word-break: break-word;  */
+}
+
 .active-quiz__btn {
   background-color: #0075b7 !important;
   color: #fff;
@@ -134,7 +139,8 @@ button:hover {
   margin-bottom: 10px !important;
 }
 
-.quiz-sub-heading {
+.quiz-sub-heading,
+.quiz-heading {
   margin: 0 !important;
   font-size: 18px;
   font-family: "Work Sans", sans-serif;
@@ -144,6 +150,10 @@ button:hover {
 }
 
 @media (max-width: 992px) {
+  .slide {
+    overflow: scroll;
+    height: 280px;
+  }
   .mean-bar {
     display: none;
   }
@@ -157,7 +167,7 @@ button:hover {
 
 @media (max-width: 570px) {
   .question {
-    font-size: 20px !important;
+    font-size: 18px !important;
   }
   .pagination-btns {
     padding-top: 10px;
@@ -167,5 +177,8 @@ button:hover {
 @media (max-width: 399px) {
   #tel-ost > a > h3 {
     font-size: 15px;
+  }
+  .question {
+    font-size: 15px !important;
   }
 }

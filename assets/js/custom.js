@@ -68,8 +68,8 @@ async function handleSubmit(e) {
 
         // add this question and its answers to the output
         output.push(
-          `<div class="slide" style="margin-bottom: 100px;">
-            <div class="quiz-heading">${currentQuestion.heading}</div>
+          `<div class="slide">
+            <pre class="quiz-heading">${currentQuestion.heading}</pre>
             <pre class="quiz-sub-heading">${currentQuestion.subHeading}</pre>
             <div class="question"> ${currentQuestion.question}</div>
             <div class="answers"> ${answers.join("")} </div>
