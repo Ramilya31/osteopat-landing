@@ -149,6 +149,10 @@ pre {
   text-align: center;
 }
 
+.quiz-message {
+  font-size: 18px !important;
+}
+
 .slide {
   overflow: scroll;
   height: 280px;
