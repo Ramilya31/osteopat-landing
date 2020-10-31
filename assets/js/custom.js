@@ -73,6 +73,7 @@ async function handleSubmit(e) {
             <pre class="quiz-sub-heading">${currentQuestion.subHeading}</pre>
             <div class="question"> ${currentQuestion.question}</div>
             <div class="answers"> ${answers.join("")} </div>
+            <div class="quiz-message">${currentQuestion.message}</div>
           </div>`
         );
       }
@@ -172,6 +173,7 @@ async function handleSubmit(e) {
         a: "Да",
         b: "Нет",
       },
+      message: "",
       correctAnswer: "a",
       wrongAnswers: "b"
     },
@@ -183,6 +185,7 @@ async function handleSubmit(e) {
         c: "Да",
         d: "Нет",
       },
+      message: "",
       correctAnswer: "c",
       wrongAnswers: "d"
     },
@@ -194,6 +197,7 @@ async function handleSubmit(e) {
         e: "Да",
         f: "Нет",
       },
+      message: "",
       correctAnswer: "e",
       wrongAnswers: "f"
     },
@@ -205,6 +209,7 @@ async function handleSubmit(e) {
         g: "Да",
         h: "Нет",
       },
+      message: "",
       correctAnswer: "g",
       wrongAnswers: "h"
     },{
@@ -215,6 +220,7 @@ async function handleSubmit(e) {
         i: "Да",
         j: "Нет",
       },
+      message: "",
       correctAnswer: "i",
       wrongAnswers: "j"
     },
@@ -226,6 +232,7 @@ async function handleSubmit(e) {
         k: "Да",
         l: "Нет",
       },
+      message: "",
       correctAnswer: "k",
       wrongAnswers: "l"
     },
@@ -237,6 +244,7 @@ async function handleSubmit(e) {
         m: "Да",
         n: "Нет",
       },
+      message: "",
       correctAnswer: "m",
       wrongAnswers: "n"
     },
@@ -248,6 +256,7 @@ async function handleSubmit(e) {
         o: "Да",
         p: "Нет",
       },
+      message: "",
       correctAnswer: "o",
       wrongAnswers: "p"
     },
@@ -259,6 +268,7 @@ async function handleSubmit(e) {
         q: "Да",
         r: "Нет",
       },
+      message: "",
       correctAnswer: "q",
       wrongAnswers: "r"
     },
@@ -270,6 +280,7 @@ async function handleSubmit(e) {
         s: "Да",
         t: "Нет",
       },
+      message: "",
       correctAnswer: "s",
       wrongAnswers: "t"
 
@@ -282,6 +293,7 @@ async function handleSubmit(e) {
         u: "Да",
         v: "Нет",
       },
+      message: "",
       correctAnswer: "u",
       wrongAnswers: "v"
 
@@ -294,6 +306,7 @@ async function handleSubmit(e) {
         w: "Да",
         x: "Нет",
       },
+      message: "",
       correctAnswer: "w",
       wrongAnswers: "x"
     },
@@ -305,6 +318,7 @@ async function handleSubmit(e) {
         y: "Да",
         z: "Нет",
       },
+      message: "",
       correctAnswer: "y",
       wrongAnswers: "z"
     },
@@ -316,6 +330,7 @@ async function handleSubmit(e) {
         a1: "Да",
         b1: "Нет",
       },
+      message: "",
       correctAnswer: "a1",
       wrongAnswers: "b1"
     },
@@ -327,6 +342,7 @@ async function handleSubmit(e) {
         c1: "Да",
         d1: "Нет",
       },
+      message: "",
       correctAnswer: "c1",
       wrongAnswers: "d1"
     },
@@ -338,6 +354,7 @@ async function handleSubmit(e) {
         e1: "Да",
         f1: "Нет",
       },
+      message: "",
       correctAnswer: "e1",
       wrongAnswers: "f1"
     },
@@ -349,6 +366,7 @@ async function handleSubmit(e) {
         g1: "Да",
         h1: "Нет",
       },
+      message: "",
       correctAnswer: "g1",
       wrongAnswers: "h1"
     },
@@ -360,6 +378,7 @@ async function handleSubmit(e) {
         i1: "Да",
         j1: "Нет",
       },
+      message: "",
       correctAnswer: "i1",
       wrongAnswers: "j1"
     },
@@ -371,6 +390,7 @@ async function handleSubmit(e) {
         k1: "Да",
         l1: "Нет",
       },
+      message: "",
       correctAnswer: "k1",
       wrongAnswers: "l1"
     },
@@ -382,6 +402,7 @@ async function handleSubmit(e) {
         m1: "Да",
         n1: "Нет",
       },
+      message: "",
       correctAnswer: "m1",
       wrongAnswers: "n1"
     },
@@ -393,6 +414,7 @@ async function handleSubmit(e) {
         o1: "Да",
         p1: "Нет",
       },
+      message: "",
       correctAnswer: "o1",
       wrongAnswers: "p1"
     },
@@ -404,6 +426,7 @@ async function handleSubmit(e) {
         q1: "Да",
         r1: "Нет",
       },
+      message: "",
       correctAnswer: "q1",
       wrongAnswers: "r1"
     },
@@ -415,6 +438,7 @@ async function handleSubmit(e) {
         s1: "Да",
         t1: "Нет",
       },
+      message: "",
       correctAnswer: "s1",
       wrongAnswers: "t1"
     },
@@ -426,6 +450,7 @@ async function handleSubmit(e) {
         u1: "Да",
         v1: "Нет",
       },
+      message: "",
       correctAnswer: "u1",
       wrongAnswers: "v1"
     },
@@ -437,6 +462,7 @@ async function handleSubmit(e) {
         w1: "Да",
         x1: "Нет",
       },
+      message: "",
       correctAnswer: "w1",
       wrongAnswers: "x1"
     },
@@ -448,6 +474,7 @@ async function handleSubmit(e) {
         y1: "Да",
         z1: "Нет",
       },
+      message: "",
       correctAnswer: "y1",
       wrongAnswers: "z1"
     },
@@ -460,6 +487,7 @@ async function handleSubmit(e) {
         a2: "Да",
         b2: "Нет",
       },
+      message: "",
       correctAnswer: "a2",
       wrongAnswers: "b2"
     },
@@ -471,6 +499,7 @@ async function handleSubmit(e) {
         c2: "Да",
         d2: "Нет",
       },
+      message: "",
       correctAnswer: "c2",
       wrongAnswers: "d2"
     },
@@ -482,6 +511,7 @@ async function handleSubmit(e) {
         e2: "Да",
         f2: "Нет",
       },
+      message: "",
       correctAnswer: "e2",
       wrongAnswers: "f2"
     },
@@ -493,20 +523,22 @@ async function handleSubmit(e) {
         g2: "Да",
         h2: "Нет",
       },
+      message: "Срыгивание - это более или менее быстрый выброс пищи, единовременный или повторяющийся, всего несколько кубических сантиметров жидкости или молока. Он в норме не должен превышать объём, равный трём кофейным ложкам жидкости. Нужно отличать срыгивание от рвоты.",
       correctAnswer: "g2",
       wrongAnswers: "h2"
     },
-    {
-      heading: "АНКЕТА 2.",
-      subHeading: "Для грудного ребёнка.",
-      question: "Срыгивание - это более или менее быстрый выброс пищи, единовременный или повторяющийся, всего несколько кубических сантиметров жидкости или молока. Он в норме не должен превышать объём, равный трём кофейным ложкам жидкости. Нужно отличать срыгивание от рвоты.",
+    // {
+    //   heading: "АНКЕТА 2.",
+    //   subHeading: "Для грудного ребёнка.",
+    //   question: "Срыгивание - это более или менее быстрый выброс пищи, единовременный или повторяющийся, всего несколько кубических сантиметров жидкости или молока. Он в норме не должен превышать объём, равный трём кофейным ложкам жидкости. Нужно отличать срыгивание от рвоты.",
       // answers: {
       //   i2: "Да",
       //   j2: "Нет",
-      // },
+      // // },
+      // message: "",
       // correctAnswer: "i2",
       // wrongAnswers: "j2"
-    },
+    // },
     {
       heading: "АНКЕТА 2.",
       subHeading: "Для грудного ребёнка.",
@@ -515,6 +547,7 @@ async function handleSubmit(e) {
         k2: "Да",
         l2: "Нет",
       },
+      message: "",
       correctAnswer: "k2",
       wrongAnswers: "l2"
     },
@@ -526,6 +559,7 @@ async function handleSubmit(e) {
         m2: "Да",
         n2: "Нет",
       },
+      message: "",
       correctAnswer: "m2",
       wrongAnswers: "n2"
     },
@@ -537,6 +571,7 @@ async function handleSubmit(e) {
         o2: "Да",
         p2: "Нет",
       },
+      message: "",
       correctAnswer: "o2",
       wrongAnswers: "p2"
     },
@@ -548,6 +583,7 @@ async function handleSubmit(e) {
         q2: "Да",
         r2: "Нет",
       },
+      message: "",
       correctAnswer: "q2",
       wrongAnswers: "r2"
     },
@@ -559,6 +595,7 @@ async function handleSubmit(e) {
         s2: "Да",
         t2: "Нет",
       },
+      message: "",
       correctAnswer: "s2",
       wrongAnswers: "t2"
     },
@@ -570,6 +607,7 @@ async function handleSubmit(e) {
         u2: "Да",
         v2: "Нет",
       },
+      message: "",
       correctAnswer: "u2",
       wrongAnswers: "v2"
     },
@@ -581,6 +619,7 @@ async function handleSubmit(e) {
         w2: "Да",
         x2: "Нет",
       },
+      message: "",
       correctAnswer: "w2",
       wrongAnswers: "x2"
     },
@@ -592,6 +631,7 @@ async function handleSubmit(e) {
         y2: "Да",
         z2: "Нет",
       },
+      message: "",
       correctAnswer: "y2",
       wrongAnswers: "z2"
     },
@@ -603,6 +643,7 @@ async function handleSubmit(e) {
         a3: "Да",
         b3: "Нет",
       },
+      message: "",
       correctAnswer: "a3",
       wrongAnswers: "b3"
     },
@@ -614,6 +655,7 @@ async function handleSubmit(e) {
         c3: "Да",
         d3: "Нет",
       },
+      message: "",
       correctAnswer: "c3",
       wrongAnswers: "d3"
     },
@@ -625,6 +667,7 @@ async function handleSubmit(e) {
         e3: "Да",
         f3: "Нет",
       },
+      message: "",
       correctAnswer: "e3",
       wrongAnswers: "f3"
     },
@@ -636,6 +679,7 @@ async function handleSubmit(e) {
         g3: "Да",
         h3: "Нет",
       },
+      message: "",
       correctAnswer: "g3",
       wrongAnswers: "h3"
     },
@@ -647,6 +691,7 @@ async function handleSubmit(e) {
         i3: "Да",
         j3: "Нет",
       },
+      message: "",
       correctAnswer: "i3",
       wrongAnswers: "j3"
     },
@@ -658,6 +703,7 @@ async function handleSubmit(e) {
         k3: "Да",
         l3: "Нет",
       },
+      message: "",
       correctAnswer: "k3",
       wrongAnswers: "l3"
     },
@@ -669,6 +715,7 @@ async function handleSubmit(e) {
         m3: "Да",
         n3: "Нет",
       },
+      message: "",
       correctAnswer: "m3",
       wrongAnswers: "n3"
     },
@@ -680,6 +727,7 @@ async function handleSubmit(e) {
         o3: "Да",
         p3: "Нет",
       },
+      message: "",
       correctAnswer: "o3",
       wrongAnswers: "p3"
     },
@@ -691,6 +739,7 @@ async function handleSubmit(e) {
         q3: "Да",
         r3: "Нет",
       },
+      message: "",
       correctAnswer: "q3",
       wrongAnswers: "r3"
     },
@@ -702,6 +751,7 @@ async function handleSubmit(e) {
         s3: "Да",
         t3: "Нет",
       },
+      message: "",
       correctAnswer: "s3",
       wrongAnswers: "t3"
     },
@@ -713,6 +763,7 @@ async function handleSubmit(e) {
         u3: "Да",
         v3: "Нет",
       },
+      message: "",
       correctAnswer: "u3",
       wrongAnswers: "v3"
     },
@@ -725,16 +776,18 @@ async function handleSubmit(e) {
         w3: "Да",
         x3: "Нет",
       },
+      message: "",
       correctAnswer: "w3"
     },
     {
-      heading: `АНКЕТА 3. \n Для ребёнка младшего возраста. (от 24 или 30 месяцев до 5 лет). \n Перед тем как ответить на вопросы этой анкеты, ответьте на вопросы предыдущей анкеты, даже если ваш ребёнок вырос. Постарайтесь восстановить по памяти его поведение. \n Даже если ваш ребёнок вышел из грудного возраста, вы сможете найти некоторые сигналы тревоги, оставшиеся ранее не замеченными. На Анкету 2 следует ответить, чтобы лучше понимать вопросы Анкеты 3`,
-      subHeading:"" ,
+      heading: `АНКЕТА 3.`,
+      subHeading:"Для ребёнка младшего возраста. (от 24 или 30 месяцев до 5 лет). \n Перед тем как ответить на вопросы этой анкеты, ответьте на вопросы предыдущей анкеты, даже если ваш ребёнок вырос. Постарайтесь восстановить по памяти его поведение. \n Даже если ваш ребёнок вышел из грудного возраста, вы сможете найти некоторые сигналы тревоги, оставшиеся ранее не замеченными. На Анкету 2 следует ответить, чтобы лучше понимать вопросы Анкеты 3" ,
       question: "",
       // answers: {
       //   w3: "Да",
       //   x3: "Нет",
-      // },
+      // // },
+      message: "",
       // correctAnswer: "w3",
       // wrongAnswers: "x3"
     },
@@ -747,6 +800,7 @@ async function handleSubmit(e) {
         y3: "Да",
         z3: "Нет",
       },
+      message: "",
       correctAnswer: "y3",
       wrongAnswers: "z3"
     },
@@ -759,6 +813,7 @@ async function handleSubmit(e) {
         a4: "Да",
         b4: "Нет",
       },
+      message: "",
       correctAnswer: "a4",
       wrongAnswers: "b4"
     },
@@ -771,6 +826,7 @@ async function handleSubmit(e) {
         c4: "Да",
         d4: "Нет",
       },
+      message: "",
       correctAnswer: "c4",
       wrongAnswers: "d4"
     },
@@ -783,6 +839,7 @@ async function handleSubmit(e) {
         e4: "Да",
         f4: "Нет",
       },
+      message: "",
       correctAnswer: "e4",
       wrongAnswers: "f4"
     },
@@ -795,6 +852,7 @@ async function handleSubmit(e) {
         g4: "Да",
         h4: "Нет",
       },
+      message: "",
       correctAnswer: "g4",
       wrongAnswers: "h4"
     },
@@ -807,6 +865,7 @@ async function handleSubmit(e) {
         i4: "Да",
         j4: "Нет",
       },
+      message: "",
       correctAnswer: "i4",
       wrongAnswers: "j4"
     },
@@ -819,6 +878,7 @@ async function handleSubmit(e) {
         k4: "Да",
         l4: "Нет",
       },
+      message: "",
       correctAnswer: "k4",
       wrongAnswers: "l4"
     },
@@ -831,6 +891,7 @@ async function handleSubmit(e) {
         m4: "Да",
         n4: "Нет",
       },
+      message: "",
       correctAnswer: "m4",
       wrongAnswers: "n4"
     },
@@ -843,6 +904,7 @@ async function handleSubmit(e) {
         o4: "Да",
         p4: "Нет",
       },
+      message: "",
       correctAnswer: "o4",
       wrongAnswers: "p4"
     },
@@ -855,6 +917,7 @@ async function handleSubmit(e) {
         q4: "Да",
         r4: "Нет",
       },
+      message: "",
       correctAnswer: "q4",
       wrongAnswers: "r4"
     },
@@ -867,6 +930,7 @@ async function handleSubmit(e) {
         s4: "Да",
         t4: "Нет",
       },
+      message: "",
       correctAnswer: "s4",
       wrongAnswers: "t4"
     },
@@ -879,6 +943,7 @@ async function handleSubmit(e) {
         u4: "Да",
         v4: "Нет",
       },
+      message: "",
       correctAnswer: "u4",
       wrongAnswers: "v4"
     },
@@ -891,6 +956,7 @@ async function handleSubmit(e) {
         w4: "Да",
         x4: "Нет",
       },
+      message: "",
       correctAnswer: "w4",
       wrongAnswers: "x4"
     },
@@ -903,6 +969,7 @@ async function handleSubmit(e) {
         y4: "Да",
         z4: "Нет",
       },
+      message: "",
       correctAnswer: "y4",
       wrongAnswers: "z4"
     },
@@ -915,6 +982,7 @@ async function handleSubmit(e) {
         a5: "Да",
         b5: "Нет",
       },
+      message: "",
       correctAnswer: "a5",
       wrongAnswers: "b5"
     },
@@ -927,6 +995,7 @@ async function handleSubmit(e) {
         c5: "Да",
         d5: "Нет",
       },
+      message: "",
       correctAnswer: "c5",
       wrongAnswers: "d5"
     },
@@ -939,6 +1008,7 @@ async function handleSubmit(e) {
         e5: "Да",
         f5: "Нет",
       },
+      message: "",
       correctAnswer: "e5",
       wrongAnswers: "f5"
     },
@@ -951,6 +1021,7 @@ async function handleSubmit(e) {
         g5: "Да",
         h5: "Нет",
       },
+      message: "",
       correctAnswer: "g5",
       wrongAnswers: "h5"
     },
@@ -963,6 +1034,7 @@ async function handleSubmit(e) {
         i5: "Да",
         j5: "Нет",
       },
+      message: "",
       correctAnswer: "i5",
       wrongAnswers: "j5"
     },
@@ -975,6 +1047,7 @@ async function handleSubmit(e) {
         k5: "Да",
         l5: "Нет",
       },
+      message: "",
       correctAnswer: "k5",
       wrongAnswers: "l5"
     },
@@ -987,6 +1060,7 @@ async function handleSubmit(e) {
         m5: "Да",
         n5: "Нет",
       },
+      message: "",
       correctAnswer: "m5",
       wrongAnswers: "n5"
     },
@@ -999,6 +1073,7 @@ async function handleSubmit(e) {
         o5: "Да",
         p5: "Нет",
       },
+      message: "",
       correctAnswer: "o5",
       wrongAnswers: "p5"
     },
@@ -1011,6 +1086,7 @@ async function handleSubmit(e) {
         q5: "Да",
         r5: "Нет",
       },
+      message: "",
       correctAnswer: "q5",
       wrongAnswers: "r5"
     },
@@ -1023,6 +1099,7 @@ async function handleSubmit(e) {
         s5: "Да",
         t5: "Нет",
       },
+      message: "",
       correctAnswer: "s5",
       wrongAnswers: "t5"
     },
@@ -1035,6 +1112,7 @@ async function handleSubmit(e) {
         u5: "Да",
         v5: "Нет",
       },
+      message: "",
       correctAnswer: "u5",
       wrongAnswers: "v5"
     },
@@ -1047,6 +1125,7 @@ async function handleSubmit(e) {
         w5: "Да",
         x5: "Нет",
       },
+      message: "",
       correctAnswer: "w5",
       wrongAnswers: "x5"
     },
@@ -1059,6 +1138,7 @@ async function handleSubmit(e) {
         y5: "Да",
         z5: "Нет",
       },
+      message: "",
       correctAnswer: "y5",
       wrongAnswers: "z5"
     },
@@ -1071,6 +1151,7 @@ async function handleSubmit(e) {
         a6: "Да",
         b6: "Нет",
       },
+      message: "",
       correctAnswer: "a6",
       wrongAnswers: "b6"
     },
@@ -1083,6 +1164,7 @@ async function handleSubmit(e) {
         c6: "Да",
         d6: "Нет",
       },
+      message: "",
       correctAnswer: "c6",
       wrongAnswers: "d6"
     },
@@ -1095,21 +1177,23 @@ async function handleSubmit(e) {
         e6: "Да",
         f6: "Нет",
       },
+      message: "В норме все зубы размещаются равномерно, а зубы верхней челюсти слегка заходят на зубы нижней челюсти.",
       correctAnswer: "e6",
       wrongAnswers: "f6"
     },
-    {
-      heading: "АНКЕТА 3.",
-      subHeading: `Для ребёнка младшего возраста. 
-      (от 24 или 30 месяцев до 5 лет).`,
-      question: "В норме между передними резцами не должно быть пустого пространства. Ваш ребёнок постоянно сосёт один или два пальца, свою пустышку или ещё что-нибудь.",
+    // {
+      // heading: "АНКЕТА 3.",
+      // subHeading: `Для ребёнка младшего возраста. 
+      // (от 24 или 30 месяцев до 5 лет).`,
+      // question: "В норме между передними резцами не должно быть пустого пространства. Ваш ребёнок постоянно сосёт один или два пальца, свою пустышку или ещё что-нибудь.",
       // answers: {
       //   g6: "Да",
       //   h6: "Нет",
-      // },
+      // // },
+      // message: "",
       // correctAnswer: "g6",
       // wrongAnswers: "h6"
-    },
+    // },
     {
       heading: "АНКЕТА 3.",
       subHeading: `Для ребёнка младшего возраста. 
@@ -1119,6 +1203,7 @@ async function handleSubmit(e) {
         i6: "Да",
         j6: "Нет",
       },
+      message: "В норме между передними резцами не должно быть пустого пространства. Ваш ребёнок постоянно сосёт один или два пальца, свою пустышку или ещё что-нибудь.",
       correctAnswer: "i6",
       wrongAnswers: "j6"
     },
@@ -1131,6 +1216,7 @@ async function handleSubmit(e) {
         k6: "Да",
         l6: "Нет",
       },
+      message: "",
       correctAnswer: "k6",
       wrongAnswers: "l6"
     },
@@ -1143,6 +1229,7 @@ async function handleSubmit(e) {
         m6: "Да",
         n6: "Нет",
       },
+      message: "",
       correctAnswer: "m6",
       wrongAnswers: "n6"
     },
@@ -1155,6 +1242,7 @@ async function handleSubmit(e) {
         o6: "Да",
         p6: "Нет",
       },
+      message: "",
       correctAnswer: "o6",
       wrongAnswers: "p6"
     },
@@ -1167,28 +1255,32 @@ async function handleSubmit(e) {
         q6: "Да",
         r6: "Нет",
       },
+      message: "Чаще всего высокое (глубокое) нёбо бывает узким. Плоское нёбо бывает широким.",
       correctAnswer: "q6",
       wrongAnswers: "r6"
     },
+    // {
+    //   heading: "АНКЕТА 3.",
+    //   subHeading: `Для ребёнка младшего возраста. 
+    //   (от 24 или 30 месяцев до 5 лет).`,
+    //   question: "Чаще всего высокое (глубокое) нёбо бывает узким. Плоское нёбо бывает широким.",
+    //   // answers: {
+    //   //   s6: "Да",
+    //   //   t6: "Нет",
+    //   // // },
+    //   message: "",
+    //   // correctAnswer: "s6",
+    //   // wrongAnswers: "t6"
+    // },
     {
-      heading: "АНКЕТА 3.",
-      subHeading: `Для ребёнка младшего возраста. 
-      (от 24 или 30 месяцев до 5 лет).`,
-      question: "Чаще всего высокое (глубокое) нёбо бывает узким. Плоское нёбо бывает широким.",
-      // answers: {
-      //   s6: "Да",
-      //   t6: "Нет",
-      // },
-      // correctAnswer: "s6",
-      // wrongAnswers: "t6"
-    },
-    {
-      heading: "Для ребёнка младшего возраста. (от 24 или 30 месяцев до 5 лет).",
+      heading: "Анкета 3.",
+      subHeading: `Для ребёнка младшего возраста.`,
       question: "11. Ваш ребёнок носит брекеты.",
       answers: {
         u6: "Да",
         v6: "Нет",
       },
+      message: "",
       correctAnswer: "u6",
       wrongAnswers: "v6"
     },
@@ -1198,7 +1290,8 @@ async function handleSubmit(e) {
     //   answers: {
     //     w6: "Да",
     //     x6: "Нет",
-    //   },
+    // //   },
+    // message: "",
     //   correctAnswer: "w6",
     //   wrongAnswers: "x6"
     // },
@@ -1208,7 +1301,8 @@ async function handleSubmit(e) {
     //   answers: {
     //     y6: "Да",
     //     z6: "Нет",
-    //   },
+    // //   },
+    // message: "",
     //   correctAnswer: "y6",
     //   wrongAnswers: "z6"
     // },
@@ -1218,7 +1312,8 @@ async function handleSubmit(e) {
     //   answers: {
     //     y5: "Да",
     //     z5: "Нет",
-    //   },
+    // //   },
+    // message: "",
     //   correctAnswer: "y5"
     // },
     // {
@@ -1227,7 +1322,8 @@ async function handleSubmit(e) {
     //   answers: {
     //     y5: "Да",
     //     z5: "Нет",
-    //   },
+    // //   },
+    // message: "",
     //   correctAnswer: "y5"
     // },
   ];
@@ -1282,10 +1378,11 @@ if(document.querySelector("#kgz")){
           // add this question and its answers to the output
           output.push(
             `<div class="slide">
-              <div class="quiz-heading" style={margin-bottom: 10px;}>${currentQuestion.heading}</div>
+              <pre class="quiz-heading">${currentQuestion.heading}</pre>
               <pre class="quiz-sub-heading">${currentQuestion.subHeading}</pre>
               <div class="question"> ${currentQuestion.question}</div>
               <div class="answers"> ${answers.join("")} </div>
+              <div class="quiz-message">${currentQuestion.message}</div>
             </div>`
           );
         }
@@ -1401,6 +1498,7 @@ if(document.querySelector("#kgz")){
           a: "Ооба",
           b: "Жок",
         },
+        message: "",
         correctAnswer: "a",
         wrongAnswers: "b"
       },
@@ -1412,6 +1510,7 @@ if(document.querySelector("#kgz")){
           c: "Ооба",
           d: "Жок",
         },
+        message: "",
         correctAnswer: "c",
         wrongAnswers: "d"
       },
@@ -1423,6 +1522,7 @@ if(document.querySelector("#kgz")){
           e: "Ооба",
           f: "Жок",
         },
+        message: "",
         correctAnswer: "e",
         wrongAnswers: "f"
       },
@@ -1434,6 +1534,7 @@ if(document.querySelector("#kgz")){
           g: "Ооба",
           h: "Жок",
         },
+        message: "",
         correctAnswer: "g",
         wrongAnswers: "h"
       },{
@@ -1444,6 +1545,7 @@ if(document.querySelector("#kgz")){
           i: "Ооба",
           j: "Жок",
         },
+        message: "",
         correctAnswer: "i",
         wrongAnswers: "j"
       },
@@ -1455,6 +1557,7 @@ if(document.querySelector("#kgz")){
           k: "Ооба",
           l: "Жок",
         },
+        message: "",
         correctAnswer: "k",
         wrongAnswers: "l"
       },
@@ -1466,6 +1569,7 @@ if(document.querySelector("#kgz")){
           m: "Ооба",
           n: "Жок",
         },
+        message: "",
         correctAnswer: "m",
         wrongAnswers: "n"
       },
@@ -1477,6 +1581,7 @@ if(document.querySelector("#kgz")){
           o: "Ооба",
           p: "Жок",
         },
+        message: "",
         correctAnswer: "o",
         wrongAnswers: "p"
       },
@@ -1488,6 +1593,7 @@ if(document.querySelector("#kgz")){
           q: "Ооба",
           r: "Жок",
         },
+        message: "",
         correctAnswer: "q",
         wrongAnswers: "r"
       },
@@ -1499,6 +1605,7 @@ if(document.querySelector("#kgz")){
           s: "Ооба",
           t: "Жок",
         },
+        message: "",
         correctAnswer: "s",
         wrongAnswers: "t"
   
@@ -1511,6 +1618,7 @@ if(document.querySelector("#kgz")){
           u: "Ооба",
           v: "Жок",
         },
+        message: "",
         correctAnswer: "u",
         wrongAnswers: "v"
   
@@ -1525,6 +1633,7 @@ if(document.querySelector("#kgz")){
           w: "Ооба",
           x: "Жок",
         },
+        message: "",
         correctAnswer: "w",
         wrongAnswers: "x"
       },
@@ -1536,6 +1645,7 @@ if(document.querySelector("#kgz")){
           y: "Ооба",
           z: "Жок",
         },
+        message: "",
         correctAnswer: "y",
         wrongAnswers: "z"
       },
@@ -1547,6 +1657,7 @@ if(document.querySelector("#kgz")){
           a1: "Ооба",
           b1: "Жок",
         },
+        message: "",
         correctAnswer: "a1",
         wrongAnswers: "b1"
       },
@@ -1558,6 +1669,7 @@ if(document.querySelector("#kgz")){
           c1: "Ооба",
           d1: "Жок",
         },
+        message: "",
         correctAnswer: "c1",
         wrongAnswers: "d1"
       },
@@ -1569,6 +1681,7 @@ if(document.querySelector("#kgz")){
           e1: "Ооба",
           f1: "Жок",
         },
+        message: "",
         correctAnswer: "e1",
         wrongAnswers: "f1"
       },
@@ -1580,20 +1693,22 @@ if(document.querySelector("#kgz")){
           g1: "Ооба",
           h1: "Жок",
         },
+        message: "",
         correctAnswer: "g1",
         wrongAnswers: "h1"
       },
-      {
-        heading: "АНКЕТА 2.",
-        subHeading: "",
-        question: "Кежигесине.",
-        answers: {
-          i1: "Ооба",
-          j1: "Жок",
-        },
-        correctAnswer: "i1",
-        wrongAnswers: "j1"
-      },
+      // {
+      //   heading: "АНКЕТА 2.",
+      //   subHeading: "",
+      //   question: "Кежигесине.",
+      //   answers: {
+      //     i1: "Ооба",
+      //     j1: "Жок",
+      //   },
+      //   message: "",
+      //   correctAnswer: "i1",
+      //   wrongAnswers: "j1"
+      // },
       {
         heading: "АНКЕТА 2.",
         subHeading: "",
@@ -1603,6 +1718,7 @@ if(document.querySelector("#kgz")){
           k1: "Ооба",
           l1: "Жок",
         },
+        message: "",
         correctAnswer: "k1",
         wrongAnswers: "l1"
       },
@@ -1614,6 +1730,7 @@ if(document.querySelector("#kgz")){
           m1: "Ооба",
           n1: "Жок",
         },
+        message: "",
         correctAnswer: "m1",
         wrongAnswers: "n1"
       },
@@ -1625,6 +1742,7 @@ if(document.querySelector("#kgz")){
           o1: "Ооба",
           p1: "Жок",
         },
+        message: "",
         correctAnswer: "o1",
         wrongAnswers: "p1"
       },
@@ -1636,6 +1754,7 @@ if(document.querySelector("#kgz")){
           q1: "Ооба",
           r1: "Жок",
         },
+        message: "",
         correctAnswer: "q1",
         wrongAnswers: "r1"
       },
@@ -1647,6 +1766,7 @@ if(document.querySelector("#kgz")){
           s1: "Ооба",
           t1: "Жок",
         },
+        message: "",
         correctAnswer: "s1",
         wrongAnswers: "t1"
       },
@@ -1658,6 +1778,7 @@ if(document.querySelector("#kgz")){
           u1: "Ооба",
           v1: "Жок",
         },
+        message: "",
         correctAnswer: "u1",
         wrongAnswers: "v1"
       },
@@ -1669,6 +1790,7 @@ if(document.querySelector("#kgz")){
           w1: "Ооба",
           x1: "Жок",
         },
+        message: "",
         correctAnswer: "w1",
         wrongAnswers: "x1"
       },
@@ -1680,6 +1802,7 @@ if(document.querySelector("#kgz")){
           y1: "Ооба",
           z1: "Жок",
         },
+        message: "",
         correctAnswer: "y1",
         wrongAnswers: "z1"
       },
@@ -1691,6 +1814,7 @@ if(document.querySelector("#kgz")){
           a2: "Ооба",
           b2: "Жок",
         },
+        message: "",
         correctAnswer: "a2",
         wrongAnswers: "b2"
       },
@@ -1703,6 +1827,7 @@ if(document.querySelector("#kgz")){
           c2: "Ооба",
           d2: "Жок",
         },
+        message: "",
         correctAnswer: "c2",
         wrongAnswers: "d2"
       },
@@ -1714,6 +1839,7 @@ if(document.querySelector("#kgz")){
           e2: "Ооба",
           f2: "Жок",
         },
+        message: "",
         correctAnswer: "e2",
         wrongAnswers: "f2"
       },
@@ -1725,6 +1851,7 @@ if(document.querySelector("#kgz")){
           g2: "Ооба",
           h2: "Жок",
         },
+        message: "",
         correctAnswer: "g2",
         wrongAnswers: "h2"
       },
@@ -1736,20 +1863,22 @@ if(document.querySelector("#kgz")){
           i2: "Ооба",
           j2: "Жок",
         },
+        message: "Кусуу – бул тамакты аздыр-көптүр чыгарып таштоо, болгону бир нече куб.см суюктук же сүттү бир учурда же кайталап чыгарып таштоо. Ал нормада болгондо көлөмү көбөйбөшү керек, кофенин үч кашыгы менен барабар. Кусууну окшуу менен айырмалай билиш керек.",
         correctAnswer: "i2",
         wrongAnswers: "j2"
       },
-      {
-        heading: "АНКЕТА 2.",
-        subHeading: "",
-        question: "Кусуу – бул тамакты аздыр-көптүр чыгарып таштоо, болгону бир нече куб.см суюктук же сүттү бир учурда же кайталап чыгарып таштоо. Ал нормада болгондо көлөмү көбөйбөшү керек, кофенин үч кашыгы менен барабар. Кусууну окшуу менен айырмалай билиш керек.",
+      // {
+      //   heading: "АНКЕТА 2.",
+      //   subHeading: "",
+      //   question: "Кусуу – бул тамакты аздыр-көптүр чыгарып таштоо, болгону бир нече куб.см суюктук же сүттү бир учурда же кайталап чыгарып таштоо. Ал нормада болгондо көлөмү көбөйбөшү керек, кофенин үч кашыгы менен барабар. Кусууну окшуу менен айырмалай билиш керек.",
         // answers: {
         //   k2: "Ооба",
         //   l2: "Жок",
         // },
+        // message: "",
         // correctAnswer: "k2",
         // wrongAnswers: "l2"
-      },
+      // },
       {
         heading: "АНКЕТА 2.",
         subHeading: "",
@@ -1758,6 +1887,7 @@ if(document.querySelector("#kgz")){
           m2: "Ооба",
           n2: "Жок",
         },
+        message: "",
         correctAnswer: "m2",
         wrongAnswers: "n2"
       },
@@ -1769,6 +1899,7 @@ if(document.querySelector("#kgz")){
           o2: "Ооба",
           p2: "Жок",
         },
+        message: "",
         correctAnswer: "o2",
         wrongAnswers: "p2"
       },
@@ -1780,6 +1911,7 @@ if(document.querySelector("#kgz")){
           q2: "Ооба",
           r2: "Жок",
         },
+        message: "",
         correctAnswer: "q2",
         wrongAnswers: "r2"
       },
@@ -1792,6 +1924,7 @@ if(document.querySelector("#kgz")){
           s2: "Ооба",
           t2: "Жок",
         },
+        message: "",
         correctAnswer: "s2",
         wrongAnswers: "t2"
       },
@@ -1803,6 +1936,7 @@ if(document.querySelector("#kgz")){
           u2: "Ооба",
           v2: "Жок",
         },
+        message: "",
         correctAnswer: "u2",
         wrongAnswers: "v2"
       },
@@ -1814,6 +1948,7 @@ if(document.querySelector("#kgz")){
           w2: "Ооба",
           x2: "Жок",
         },
+        message: "",
         correctAnswer: "w2",
         wrongAnswers: "x2"
       },
@@ -1825,6 +1960,7 @@ if(document.querySelector("#kgz")){
           y2: "Ооба",
           z2: "Жок",
         },
+        message: "",
         correctAnswer: "y2",
         wrongAnswers: "z2"
       },
@@ -1836,6 +1972,7 @@ if(document.querySelector("#kgz")){
           a3: "Ооба",
           b3: "Жок",
         },
+        message: "",
         correctAnswer: "a3",
         wrongAnswers: "b3"
       },
@@ -1847,6 +1984,7 @@ if(document.querySelector("#kgz")){
           c3: "Ооба",
           d3: "Жок",
         },
+        message: "",
         correctAnswer: "c3",
         wrongAnswers: "d3"
       },
@@ -1858,6 +1996,7 @@ if(document.querySelector("#kgz")){
           e3: "Ооба",
           f3: "Жок",
         },
+        message: "",
         correctAnswer: "e3",
         wrongAnswers: "f3"
       },
@@ -1869,6 +2008,7 @@ if(document.querySelector("#kgz")){
           g3: "Ооба",
           h3: "Жок",
         },
+        message: "",
         correctAnswer: "g3",
         wrongAnswers: "h3"
       },
@@ -1880,6 +2020,7 @@ if(document.querySelector("#kgz")){
           i3: "Ооба",
           j3: "Жок",
         },
+        message: "",
         correctAnswer: "i3",
         wrongAnswers: "j3"
       },
@@ -1891,6 +2032,7 @@ if(document.querySelector("#kgz")){
           k3: "Ооба",
           l3: "Жок",
         },
+        message: "",
         correctAnswer: "k3",
         wrongAnswers: "l3"
       },
@@ -1902,6 +2044,7 @@ if(document.querySelector("#kgz")){
           m3: "Ооба",
           n3: "Жок",
         },
+        message: "",
         correctAnswer: "m3",
         wrongAnswers: "n3"
       },
@@ -1913,6 +2056,7 @@ if(document.querySelector("#kgz")){
           o3: "Ооба",
           p3: "Жок",
         },
+        message: "",
         correctAnswer: "o3",
         wrongAnswers: "p3"
       },
@@ -1924,6 +2068,7 @@ if(document.querySelector("#kgz")){
           q3: "Ооба",
           r3: "Жок",
         },
+        message: "",
         correctAnswer: "q3",
         wrongAnswers: "r3"
       },
@@ -1935,6 +2080,7 @@ if(document.querySelector("#kgz")){
           s3: "Ооба",
           t3: "Жок",
         },
+        message: "",
         correctAnswer: "s3",
         wrongAnswers: "t3"
       },
@@ -1946,6 +2092,7 @@ if(document.querySelector("#kgz")){
           u3: "Ооба",
           v3: "Жок",
         },
+        message: "",
         correctAnswer: "u3",
         wrongAnswers: "v3"
       },
@@ -1957,6 +2104,7 @@ if(document.querySelector("#kgz")){
           w3: "Ооба",
           x3: "Жок",
         },
+        message: "",
         correctAnswer: "w3",
         wrongAnswers: "x3"
       },
@@ -1964,10 +2112,11 @@ if(document.querySelector("#kgz")){
         heading: "АНКЕТА 2.",
         subHeading: "",
         question: "Бала толугу менен алсыз жана ыйлабай калган маалда сиз аны курсагы менен колуңузга жаткырасыз жана анын курсагы чыңалып турганын билесиз.",
-        // answers: {
-        //   y3: "Ооба",
-        //   z3: "Жок",
-        // },
+        answers: {
+          y3: "Ооба",
+          z3: "Жок",
+        },
+        message: "",
         correctAnswer: "y3",
         wrongAnswers: "z3"
       },
@@ -1980,6 +2129,7 @@ if(document.querySelector("#kgz")){
           a4: "Ооба",
           b4: "Жок",
         },
+        message: "",
         correctAnswer: "a4",
         wrongAnswers: "b4"
       },
@@ -1991,6 +2141,7 @@ if(document.querySelector("#kgz")){
           c4: "Ооба",
           d4: "Жок",
         },
+        message: "",
         correctAnswer: "c4",
         wrongAnswers: "d4"
       },
@@ -2002,6 +2153,7 @@ if(document.querySelector("#kgz")){
           e4: "Ооба",
           f4: "Жок",
         },
+        message: "",
         correctAnswer: "e4",
         wrongAnswers: "f4"
       },
@@ -2013,6 +2165,7 @@ if(document.querySelector("#kgz")){
           g4: "Ооба",
           h4: "Жок",
         },
+        message: "",
         correctAnswer: "g4",
         wrongAnswers: "h4"
       },
@@ -2024,6 +2177,7 @@ if(document.querySelector("#kgz")){
           i4: "Ооба",
           j4: "Жок",
         },
+        message: "",
         correctAnswer: "i4",
         wrongAnswers: "j4"
       },
@@ -2035,6 +2189,7 @@ if(document.querySelector("#kgz")){
           k4: "Ооба",
           l4: "Жок",
         },
+        message: "",
         correctAnswer: "k4",
         wrongAnswers: "l4"
       },
@@ -2046,20 +2201,22 @@ if(document.querySelector("#kgz")){
           m4: "Ооба",
           n4: "Жок",
         },
+        message: "",
         correctAnswer: "m4",
         wrongAnswers: "n4"
       },
-      {
-        heading: "АНКЕТА 3.",
-        subHeading: "",
-        question: "Он всё время дышит ртом.",
-        answers: {
-          o4: "Ооба",
-          p4: "Жок",
-        },
-        correctAnswer: "o4",
-        wrongAnswers: "p4"
-      },
+      // {
+      //   heading: "АНКЕТА 3.",
+      //   subHeading: "",
+      //   question: "Он всё время дышит ртом.",
+      //   answers: {
+      //     o4: "Ооба",
+      //     p4: "Жок",
+      //   },
+      // message: "",
+      //   correctAnswer: "o4",
+      //   wrongAnswers: "p4"
+      // },
       {
         heading: "АНКЕТА 3.",
         subHeading: "",
@@ -2068,6 +2225,7 @@ if(document.querySelector("#kgz")){
           q4: "Ооба",
           r4: "Жок",
         },
+        message: "",
         correctAnswer: "q4",
         wrongAnswers: "r4"
       },
@@ -2079,6 +2237,7 @@ if(document.querySelector("#kgz")){
           s4: "Ооба",
           t4: "Жок",
         },
+        message: "",
         correctAnswer: "s4",
         wrongAnswers: "t4"
       },
@@ -2090,6 +2249,7 @@ if(document.querySelector("#kgz")){
           u4: "Ооба",
           v4: "Жок",
         },
+        message: "",
         correctAnswer: "u4",
         wrongAnswers: "v4"
       },
@@ -2101,6 +2261,7 @@ if(document.querySelector("#kgz")){
           w4: "Ооба",
           x4: "Жок",
         },
+        message: "",
         correctAnswer: "w4",
         wrongAnswers: "x4"
       },
@@ -2112,6 +2273,7 @@ if(document.querySelector("#kgz")){
           y4: "Ооба",
           z4: "Жок",
         },
+        message: "",
         correctAnswer: "y4",
         wrongAnswers: "z4"
       },
@@ -2123,6 +2285,7 @@ if(document.querySelector("#kgz")){
           a5: "Ооба",
           b5: "Жок",
         },
+        message: "",
         correctAnswer: "a5",
         wrongAnswers: "b5"
       },
@@ -2134,6 +2297,7 @@ if(document.querySelector("#kgz")){
           c5: "Ооба",
           d5: "Жок",
         },
+        message: "",
         correctAnswer: "c5",
         wrongAnswers: "d5"
       },
@@ -2145,6 +2309,7 @@ if(document.querySelector("#kgz")){
           e5: "Ооба",
           f5: "Жок",
         },
+        message: "",
         correctAnswer: "e5",
         wrongAnswers: "f5"
       },
@@ -2156,6 +2321,7 @@ if(document.querySelector("#kgz")){
           g5: "Ооба",
           h5: "Жок",
         },
+        message: "",
         correctAnswer: "g5",
         wrongAnswers: "h5"
       },
@@ -2167,6 +2333,7 @@ if(document.querySelector("#kgz")){
           i5: "Ооба",
           j5: "Жок",
         },
+        message: "",
         correctAnswer: "i5",
         wrongAnswers: "j5"
       },
@@ -2178,6 +2345,7 @@ if(document.querySelector("#kgz")){
           k5: "Ооба",
           l5: "Жок",
         },
+        message: "",
         correctAnswer: "k5",
         wrongAnswers: "l5"
       },
@@ -2189,6 +2357,7 @@ if(document.querySelector("#kgz")){
           m5: "Ооба",
           n5: "Жок",
         },
+        message: "",
         correctAnswer: "m5",
         wrongAnswers: "n5"
       },
@@ -2200,6 +2369,7 @@ if(document.querySelector("#kgz")){
           o5: "Ооба",
           p5: "Жок",
         },
+        message: "",
         correctAnswer: "o5",
         wrongAnswers: "p5"
       },
@@ -2211,6 +2381,7 @@ if(document.querySelector("#kgz")){
           q5: "Ооба",
           r5: "Жок",
         },
+        message: "",
         correctAnswer: "q5",
         wrongAnswers: "r5"
       },
@@ -2222,6 +2393,7 @@ if(document.querySelector("#kgz")){
           s5: "Ооба",
           t5: "Жок",
         },
+        message: "",
         correctAnswer: "s5",
         wrongAnswers: "t5"
       },
@@ -2233,6 +2405,7 @@ if(document.querySelector("#kgz")){
           u5: "Ооба",
           v5: "Жок",
         },
+        message: "",
         correctAnswer: "u5",
         wrongAnswers: "v5"
       },
@@ -2244,6 +2417,7 @@ if(document.querySelector("#kgz")){
           w5: "Ооба",
           x5: "Жок",
         },
+        message: "",
         correctAnswer: "w5",
         wrongAnswers: "x5"
       },
@@ -2255,6 +2429,7 @@ if(document.querySelector("#kgz")){
           y5: "Ооба",
           z5: "Жок",
         },
+        message: "",
         correctAnswer: "y5",
         wrongAnswers: "z5"
       },
@@ -2266,6 +2441,7 @@ if(document.querySelector("#kgz")){
           a6: "Ооба",
           b6: "Жок",
         },
+        message: "",
         correctAnswer: "a6",
         wrongAnswers: "b6"
       },
@@ -2277,6 +2453,7 @@ if(document.querySelector("#kgz")){
           c6: "Ооба",
           d6: "Жок",
         },
+        message: "",
         correctAnswer: "c6",
         wrongAnswers: "d6"
       },
@@ -2288,6 +2465,7 @@ if(document.querySelector("#kgz")){
           e6: "Ооба",
           f6: "Жок",
         },
+        message: "",
         correctAnswer: "e6",
         wrongAnswers: "f6"
       },
@@ -2299,6 +2477,7 @@ if(document.querySelector("#kgz")){
           g6: "Ооба",
           h6: "Жок",
         },
+        message: "",
         correctAnswer: "g6",
         wrongAnswers: "h6"
       },
@@ -2310,6 +2489,7 @@ if(document.querySelector("#kgz")){
           i6: "Ооба",
           j6: "Жок",
         },
+        message: "Нормалдуу тиштер бирдей жайгашат, ал эми жогорку жаактагы тиштер төмөнкү жаактагы тиштерге жеңил кирип турат.",
         correctAnswer: "i6",
         wrongAnswers: "j6"
       },
@@ -2321,17 +2501,19 @@ if(document.querySelector("#kgz")){
           k6: "Ооба",
           l6: "Жок",
         },
+        message: "Нормада алдыңкы азуу тиштердин ортосунда бош орун болбошу керек.",
         correctAnswer: "k6",
         wrongAnswers: "l6"
       },
       {
         heading: "АНКЕТА 3.",
         subHeading: "",
-        question: "Нормада алдыңкы азуу тиштердин ортосунда бош орун болбошу керек. Балаңыз ар дайым бир же эки манжасын, өзүнүн упчусун же башка нерсени соро берет.",
+        question: "Балаңыз ар дайым бир же эки манжасын, өзүнүн упчусун же башка нерсени соро берет.",
         answers: {
           m6: "Ооба",
           n6: "Жок",
         },
+        message: "",
         correctAnswer: "m6",
         wrongAnswers: "n6"
       },
@@ -2343,6 +2525,7 @@ if(document.querySelector("#kgz")){
           o6: "Ооба",
           p6: "Жок",
         },
+        message: "",
         correctAnswer: "o6",
         wrongAnswers: "p6"
       },
@@ -2354,6 +2537,7 @@ if(document.querySelector("#kgz")){
           q6: "Ооба",
           r6: "Жок",
         },
+        message: "Бул баланын ар дайым бармагын же упчуну соргонунан пайда болот. Таңдай көтөрүлөт. Анда манжанын же упчунун изи калат. Таңдай бузулат, тиштери жана жаактын жогорку бөлүгү бузулат. Эне өзүнүн манжасы менен таңдайдын тереңдигин билет.",
         correctAnswer: "q6",
         wrongAnswers: "r6"
       },
@@ -2365,17 +2549,19 @@ if(document.querySelector("#kgz")){
           s6: "Ооба",
           t6: "Жок",
         },
+        message: "",
         correctAnswer: "s6",
         wrongAnswers: "t6"
       },
       {
         heading: "АНКЕТА 3.",
         subHeading: "",
-        question: "Көз болжол менен баланын таңдайы кеңейген. \nКөбүнчө жогорку (терең) таңдайлар кууш болот. Жалпак таңдайлар кең болот.",
+        question: "Көз болжол менен баланын таңдайы кеңейген.",
         answers: {
-          u6: "Да",
-          v6: "Нет",
+          u6: "Ооба",
+          v6: "Жок",
         },
+        message: "Көбүнчө жогорку (терең) таңдайлар кууш болот. Жалпак таңдайлар кең болот.",
         correctAnswer: "u6",
         wrongAnswers: "v6"
       },
@@ -2384,9 +2570,10 @@ if(document.querySelector("#kgz")){
         subHeading: "",
         question: "11. Сиздин балаңыз брекет кийет.",
         answers: {
-          w6: "Да",
-          x6: "Нет",
+          w6: "Ооба",
+          x6: "Жок",
         },
+        message: "",
         correctAnswer: "w6",
         wrongAnswers: "x6"
       },
@@ -2440,5 +2627,4 @@ if(document.querySelector("#kgz")){
     previousButton.addEventListener("click", showPreviousSlide);
     nextButton.addEventListener("click", showNextSlide);
   })();
-  
 }

@@ -149,6 +149,11 @@ pre {
   text-align: center;
 }
 
+.slide {
+  overflow: scroll;
+  height: 280px;
+}
+
 @media (max-width: 992px) {
   .slide {
     overflow: scroll;
