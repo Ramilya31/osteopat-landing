@@ -547,27 +547,27 @@
                                 <button class="tm-button tm-button-dark m-auto" id="test-btn">Тест отуу</button>
                             </h2>
                             <div class="d-none form-block">
-                                <form class="form-submit" onsubmit="handleSubmit(event)">
+                                <form id="myForm" class="form-submit" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdT4xZIofpeb424fRm9sayqmc1nu30XBn2IBJDb_MkLbZz57g/formResponse" onsubmit="handleSubmit(event)">
                                 <div class="form-group">
                                   <label for="exampleInputEmail1">Сиздин атыныз</label>
-                                  <input id="name-inp" name="entry.1730801015" type="text" class="form-control" aria-describedby="emailHelp" placeholder="Сиздин атыныз">
+                                  <input id="name-inp" type="text" name="entry.1730801015" class="form-control" aria-describedby="emailHelp" placeholder="Ваше имя">
                                 </div>
                                 <div class="form-group">
-                                  <label for="exampleInputPassword1">Сиздин телефон номурунуз</label>
-                                  <input id="password-inp" name="entry.2086674733" type="text" class="form-control" id="exampleInputPassword1" placeholder="Сиздин телефон номурунуз">
+                                  <label for="exampleInputPassword1">Сиздин номериниз</label>
+                                  <input id="password-inp" type="tel" name="entry.208667473" class="form-control" id="exampleInputPassword1" placeholder="Номер телефона">
                                 </div>
-                                <button type="submit" class="btn send-btn">Отправить</button>
+                                <button type="submit" class="tm-button send-btn">Жонотуу</button>
                                 </form>
                             </div>
                             <div class="quiz-form d-none">
                                 <h1>Тест</h1>
                                 <div class="quiz-container">
-                                <div id="quiz"></div>
+                                    <div id="quiz"></div>
                                 </div>
-                                <div class="pagination-btns mt-5">
-                                    <button id="previous" class="tm-button previous-btn">Буга чейинки суроо</button>
-                                    <button id="next" class="tm-button next-btn">Кийинки суроо</button>
-                                    <button id="submit" class="tm-button submit-btn">Тестти Бутуруу</button>
+                                <div class="mt-5 pagination-btns">
+                                    <button id="previous" class="tm-button pagin-btn previous-btn">Бугачейинки суроо</button>
+                                    <button id="next" class="tm-button pagin-btn next-btn">Кийинки суроо</button>
+                                    <button id="submit" class="tm-button pagin-btn submit-btn">Тестти бутуруу</button>
                                 </div>
                                 <div id="results"></div>
                             </div>
