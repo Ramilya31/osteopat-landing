@@ -1,4 +1,4 @@
-let button = document.querySelector("#test-btn") 
+let button = document.querySelector("#test-btn")
 
 function addForm(){
   let testBlock = document.querySelector(".test-block")
@@ -9,30 +9,11 @@ function addForm(){
 button.addEventListener("click", addForm)
 
 async function handleSubmit(e) {
-  e.preventDefault()
-  const name = document.querySelector("#name-inp").value;
-  const phone = document.querySelector("#password-inp").value;
-  console.log(name, phone)
-  if(name === "" || phone === "" ) return alert("Заполните поля") 
-  try {
-    const response = await fetch("http://localhost:5000/api/user-info/add", {
-    method: "POST",
-    body: {
-      "name": name,
-      "phone": phone
-    }, 
-    headers: {
-      'Content-Type': 'application/json',
-      "Access-Control-Allow-Origin": "http://localhost:5000/api/user-info/add"
-    }
-  })
-  const json = await response.json
-  console.log("Успех", JSON.stringify(json))
-  } catch (error) {
-    console.error('Ошибка:', error);
-  }
-  document.querySelector('.form-submit').classList.add("d-none")
-  document.querySelector('.quiz-form').classList.add("d-block")
+  setTimeout(() => {
+    e.preventDefault()
+    document.querySelector('.form-submit').classList.add("d-none")
+    document.querySelector('.quiz-form').classList.add("d-block")
+  }, 2000)
 }
 
 // ---------------Qiuz------------------
@@ -50,30 +31,91 @@ async function handleSubmit(e) {
 
         // variable to store the list of possible answers
         const answers = [];
+        const subAnswers = [];
+        const subAnswers2 = [];
+        const subAnswers3 = [];
+        const subAnswers4 = [];
 
         // and for each available answer...
         for(letter in currentQuestion.answers){
-          console.log(letter)
           // ...add an HTML radio button
           answers.push(
-            `<form>
-              <input type="checkbox" id="test-${letter}" name="question${questionNumber}" value="${letter}" style="background: #333">
+            `
+            <div id="wrapped">
+              <input type="radio" id="test-${letter}" class="test-input" name="question${questionNumber}" value="${letter}"/>
               <label for="test-${letter}">
-                ${currentQuestion.answers[letter]}
+                    ${currentQuestion.answers[letter]}
               </label>
-            </form>
+            </div>
             `
           );
         }
 
+        for(key in currentQuestion?.subQuestions?.subAnswer1){
+          subAnswers.push(
+            `
+              <form>
+              <input type="checkbox" id="test-${key}" class="test-input" name="question${questionNumber}" value="${key}"/>
+              <label for="test-${key}">
+                    ${currentQuestion?.subQuestions.subAnswer1[key]}
+                </label>
+              </form>
+          `)
+        }
+
+        for(answers2 in currentQuestion?.subQuestions?.subAnswers2){
+          subAnswers2.push(
+            `
+            <form id="wrapped">
+              <input type="checkbox" id="test-${answers2}" class="test-input" name="question${questionNumber}" value="${answers2}"/>
+              <label for="test-${answers2}">
+                  ${currentQuestion?.subQuestions.subAnswers2[answers2]}
+              </label>
+            </form>
+          `)
+        }
+        for(answers3 in currentQuestion?.subQuestions?.subAnswers3){
+          subAnswers3.push(
+            `
+            <form id="wrapped">
+              <input type="checkbox" id="test-${answers3}" class="test-input" name="question${questionNumber}" value="${answers3}"/>
+              <label for="test-${answers3}">
+                  ${currentQuestion?.subQuestions.subAnswers3[answers3]}
+              </label>
+            </form>
+          `
+          )
+        }
+
+        for(answers4 in currentQuestion?.subQuestions?.subAnswers4){
+          subAnswers4.push(
+          `
+          <form id="wrapped">
+            <input type="checkbox" id="test-${answers4}" class="test-input" name="question${questionNumber}" value="${answers4}"/>
+            <label for="test-${answers4}">
+                ${currentQuestion?.subQuestions?.subAnswers4[answers4]}
+            </label>
+          </form>
+        `)
+        }
+        console.log()
+
         // add this question and its answers to the output
         output.push(
           `<div class="slide">
-            <pre class="quiz-heading">${currentQuestion.heading}</pre>
-            <pre class="quiz-sub-heading">${currentQuestion.subHeading}</pre>
-            <div class="question"> ${currentQuestion.question}</div>
+            <pre class="quiz-heading pb-3">${currentQuestion.heading}</pre>
+            <pre class="quiz-sub-heading pb-2">${currentQuestion.subHeading}</pre>
+            <pre class="question"> ${currentQuestion.question}</pre>
             <div class="answers"> ${answers.join("")} </div>
             <div class="quiz-message">${currentQuestion.message}</div>
+            <div class="subQuestion">${currentQuestion?.subQuestions?.subQuestion1 ? currentQuestion?.subQuestions?.subQuestion1 : ""}</div>
+            <div class="subAnswers pb-3">${subAnswers.join("")}</div>
+            <div class="subQuestion">${currentQuestion?.subQuestions?.subQuestion2 ? currentQuestion?.subQuestions?.subQuestion2 : ""}</div>
+            <div class="subAnswers pb-3">${subAnswers2.join("")}</div>
+            <div class="subQuestion">${currentQuestion?.subQuestions?.subQuestion3 ? currentQuestion?.subQuestions?.subQuestion3 : ""}</div>
+            <div class="subAnswers pb-3">${subAnswers3.join("")}</div>
+            <div class="subQuestion">${currentQuestion?.subQuestions?.subQuestion4 ? currentQuestion?.subQuestions?.subQuestion4 : ""}</div>
+            <div class="subAnswers">${subAnswers4.join("")}</div>
           </div>`
         );
       }
@@ -90,7 +132,7 @@ async function handleSubmit(e) {
 
     // keep track of user's answers
     let numCorrect = -1;
-    let wAnswers = 0
+    let wAnswers = -1
 
     // for each question...
     myQuestions.forEach( (currentQuestion, questionNumber) => {
@@ -105,26 +147,25 @@ async function handleSubmit(e) {
         // add to the number of correct answers
         numCorrect++;
 
-        // color the answers green
-        // answerContainers[questionNumber].style.color = 'lightgreen';
       } else if(userAnswer === currentQuestion.wrongAnswers){
         wAnswers++
       }
-      // if answer is wrong or blank
       else{
         // color the answers red
         // answerContainers[questionNumber].style.color = 'red';
       }
     });
 
+    const resultsInfo = document.querySelector(".quiz-form");
+
     // show number of correct answers out of total
-    numCorrect + wAnswers >= 1 && numCorrect + wAnswers <= 8 ? resultsContainer.innerHTML = `<div>
+    numCorrect + wAnswers >= 1 && numCorrect + wAnswers <= 8 ? resultsInfo.innerHTML = `<div>
     <p>Сумма всех ДА: ${numCorrect}</p>
     <p>Сумма всех НЕТ: ${wAnswers}</p>
     Если вы ответили ДА хотя бы на один из поставленных по родам вопросов, вполне очевидно, что череп вашего малыша подвергся некоторому напряжению.
     По типу предлежания, обеспечивающему лёгкое или трудное изгнание плода, самостоятельные роды или родовспоможение, череп новорождённого испытает более или менее сильные нагрузки.
     Хочется ещё раз повторить, что каждые роды особые и единственные в своём роде. Нельзя частный случай возводить в ранг общего и универсального закона!
-    Визит к остеопату необходим сразу же после родов, как только появляется для него возможность.</div>` : resultsContainer.innerHTML = `<div><p>Сумма всех ДА: ${numCorrect}</p>
+    Визит к остеопату необходим сразу же после родов, как только появляется для него возможность.</div>` : resultsInfo.innerHTML = `<div><p>Сумма всех ДА: ${numCorrect}</p>
     <p>Сумма всех НЕТ: ${wAnswers}</p>
     Чем больше ответов ДА, тем больше необходимость посетить остеопата.</div>`;
   }
@@ -152,7 +193,7 @@ async function handleSubmit(e) {
     }
   }
 
-  function showNextSlide() {
+  function showNextSlide() {    
     showSlide(currentSlide + 1);
   }
 
@@ -162,7 +203,6 @@ async function handleSubmit(e) {
 
   // Variables
   const quizContainer = document.getElementById('quiz');
-  const resultsContainer = document.getElementById('results');
   const submitButton = document.getElementById('submit');
   const myQuestions = [
     {
@@ -301,7 +341,25 @@ async function handleSubmit(e) {
     {
       heading: "АНКЕТА 2.",
       subHeading: "Для грудного ребёнка.",
-      question: "5. Лёжа. \n Он спит на одном и том же боку.",
+      question: `5. Лёжа. 
+      Он спит на одном и том же боку.`,
+      subQuestions: {
+        subQuestion1: "Он спит на одном и том же боку.",
+        subAnswer1: {
+          w12: "Да",
+          x12: "Нет"
+        },
+        subQuestion2: "Он поворачивает голову в одну и ту же сторону.",
+        subAnswers2: {
+        y: "Да",
+        z: "Нет",
+      },
+      subQuestion3: "Его голова находится в положении постоянного гиперразгибания, она сильно запрокинута назад (в этом случае образуется свободное пространство между его шеей и кроваткой).",
+      subAnswers3: {
+        a1: "Да",
+        b1: "Нет",
+      },
+      },
       answers: {
         w: "Да",
         x: "Нет",
@@ -309,30 +367,6 @@ async function handleSubmit(e) {
       message: "",
       correctAnswer: "w",
       wrongAnswers: "x"
-    },
-    {
-      heading: "АНКЕТА 2.",
-      subHeading: "Для грудного ребёнка.",
-      question: "Он поворачивает голову в одну и ту же сторону.",
-      answers: {
-        y: "Да",
-        z: "Нет",
-      },
-      message: "",
-      correctAnswer: "y",
-      wrongAnswers: "z"
-    },
-    {
-      heading: "АНКЕТА 2.",
-      subHeading: "Для грудного ребёнка.",
-      question: "Его голова находится в положении постоянного гиперразгибания, она сильно запрокинута назад (в этом случае образуется свободное пространство между его шеей и кроваткой).",
-      answers: {
-        a1: "Да",
-        b1: "Нет",
-      },
-      message: "",
-      correctAnswer: "a1",
-      wrongAnswers: "b1"
     },
     {
       heading: "АНКЕТА 2.",
@@ -370,42 +404,67 @@ async function handleSubmit(e) {
       correctAnswer: "g1",
       wrongAnswers: "h1"
     },
+    // {
+    //   heading: "АНКЕТА 2.",
+    //   subHeading: "Для грудного ребёнка.",
+    //   question: "9. Когда вы моете вашего малыша, он кричит, если вы дотрагиваетесь до его: \n Головы.",
+    //   answers: {
+    //     i1: "Да",
+    //     j1: "Нет",
+    //   },
+    //   message: "",
+    //   correctAnswer: "i1",
+    //   wrongAnswers: "j1"
+    // },
     {
       heading: "АНКЕТА 2.",
       subHeading: "Для грудного ребёнка.",
-      question: "9. Когда вы моете вашего малыша, он кричит, если вы дотрагиваетесь до его: \n Головы.",
+      question: `9. Когда вы моете вашего малыша, он кричит, если вы дотрагиваетесь до его: 
+      Головы.`,
+      subQuestions: {
+        subQuestion4: "Затылка",
+        subAnswers4: {
+          w23: "Да",
+          x23: "Нет"
+        },
+        subQuestion5: "Других частей тела.",
+        subAnswers5: {
+        y23: "Да",
+        z23: "Нет",
+        },
+      },
       answers: {
-        i1: "Да",
-        j1: "Нет",
+        w: "Да",
+        x: "Нет",
       },
       message: "",
-      correctAnswer: "i1",
-      wrongAnswers: "j1"
+      correctAnswer: "w",
+      wrongAnswers: "x"
     },
-    {
-      heading: "АНКЕТА 2.",
-      subHeading: "Для грудного ребёнка.",
-      question: "Затылка.",
-      answers: {
-        k1: "Да",
-        l1: "Нет",
-      },
-      message: "",
-      correctAnswer: "k1",
-      wrongAnswers: "l1"
-    },
-    {
-      heading: "АНКЕТА 2.",
-      subHeading: "Для грудного ребёнка.",
-      question: "Других частей тела.",
-      answers: {
-        m1: "Да",
-        n1: "Нет",
-      },
-      message: "",
-      correctAnswer: "m1",
-      wrongAnswers: "n1"
-    },
+    // {
+    //   heading: "АНКЕТА 2.",
+    //   subHeading: "Для грудного ребёнка.",
+    //   question: "Затылка.",
+    //   answers: {
+    //     k1: "Да",
+    //     l1: "Нет",
+    //   },
+    //   message: "",
+    //   correctAnswer: "k1",
+    //   wrongAnswers: "l1"
+    // },
+    // {
+    //   heading: "АНКЕТА 2.",
+    //   subHeading: "Для грудного ребёнка.",
+    //   question: "Других частей тела.",
+    //   answers: {
+    //     m1: "Да",
+    //     n1: "Нет",
+    //   },
+    //   message: "",
+    //   correctAnswer: "m1",
+    //   wrongAnswers: "n1"
+    // },
     {
       heading: "АНКЕТА 2.",
       subHeading: "Для грудного ребёнка.",
@@ -1344,6 +1403,23 @@ async function handleSubmit(e) {
   submitButton.addEventListener('click', showResults);
   previousButton.addEventListener("click", showPreviousSlide);
   nextButton.addEventListener("click", showNextSlide);
+  
+  
+  // let checkedInp = false
+  // inptest.addEventListener("change", function(event) {
+  //     if(event.target.checked){
+  //       checkedInp = true
+  //       console.log(event.target.checked)
+  //     }
+  // })
+  // nextButton.addEventListener("click", function(){
+  //   if(!checkedInp) {
+  //     return alert("Заполните поле")
+  //   } else if(checkedInp){
+  //     checkedInp != checkedInp 
+  //   }
+    
+  // })
 })();
 
 if(document.querySelector("#kgz")){
@@ -1365,12 +1441,13 @@ if(document.querySelector("#kgz")){
             console.log(letter)
             // ...add an HTML radio button
             answers.push(
-              `<form>
-                <input type="checkbox" id="test-${letter}" name="question${questionNumber}" value="${letter}" style="background: #333">
+              `
+              <div id="wrapped">
+                <input type="radio" id="test-${letter}" class="test-input" name="question${questionNumber}" value="${letter}"/>
                 <label for="test-${letter}">
-                  ${currentQuestion.answers[letter]}
+                      ${currentQuestion.answers[letter]}
                 </label>
-              </form>
+              </div>
               `
             );
           }
@@ -1398,8 +1475,8 @@ if(document.querySelector("#kgz")){
       const answerContainers = quizContainer.querySelectorAll('.answers');
   
       // keep track of user's answers
-      let numCorrect = -1;
-      let wAnswers = 0
+      let numCorrect = 0;
+      let wAnswers = 0;
   
       // for each question...
       myQuestions.forEach( (currentQuestion, questionNumber) => {
@@ -1426,9 +1503,10 @@ if(document.querySelector("#kgz")){
         }
       });
   
+      const resultsInfo = document.querySelector(".quiz-form");    
 
       if(numCorrect + wAnswers >= 21) {
-        resultsContainer.innerHTML = `
+        resultsInfo.innerHTML = `
         <div>
         Ооба (бардыгы): ${numCorrect}
         Жок (бардыгы): ${wAnswers}
@@ -1442,13 +1520,13 @@ if(document.querySelector("#kgz")){
       }
 
       // show number of correct answers out of total
-      numCorrect + wAnswers >= 1 && numCorrect + wAnswers <= 8 ? resultsContainer.innerHTML = `
+      numCorrect + wAnswers >= 1 && numCorrect + wAnswers <= 8 ? resultsInfo.innerHTML = `
       <div>Корутунду.
       <p>ООБА (бардык жооп): ${numCorrect}</p>
       <p>ЖОК (бардык жооп): ${wAnswers}</p>
       Эгерде сиз төрөт боюнча берилген суроолордун жок дегенде бирөөсүнө ООБА деп жооп берсеңиз, анда балаңыздын баш сөөгү кандайдыр бир стресске дуушар болгон.
       Түйүлдүктүн жеңил же кыйынчылык менен ичтен чыгаруусун камсыздай турган жатуунун түрүнө жараша, өз алдынча же акушердин жардамы менен төрөөдө, жаңы төрөлгөн ымыркайдын баш сөөгү аздыр-көптүр катуу стресстерге дуушар болот. Дагы кайталап айткыбыз келет, ар бир төрөт өзгөчө жана өзүнчө түргө ээ. Жеке учурларды жалпы жана универсалдуу мыйзам даражасына көтөрүүгө мүмкүн эмес! Остеопатка төрөттөн кийин, мүмкүнчүлүк болгондо эле дароо баруу керек.</div>
-      `: resultsContainer.innerHTML = `<div>
+      `: resultsInfo.innerHTML = `<div>
       <p>ООБА (бардыгы): ${numCorrect}</p>
       <p>ЖОК (бардыгы): ${wAnswers}</p>
       ООБА деген жооп канчалык көп болсо, остеопатка баруу зарылдыгы ошончолук жогору.</div>`;

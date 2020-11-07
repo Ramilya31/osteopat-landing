@@ -128,19 +128,35 @@ pre {
 
 .main-test__block {
   margin: 0 auto !important;
-  width: 700px;
+  width: 100vw;
 }
 
 .pagination-btns {
   margin-top: 5rem !important;
 }
 
-.quiz-heading {
-  margin-bottom: 10px !important;
+.question,
+.subQuestion {
+  font-size: 18px;
+  font-style: italic;
 }
 
-.quiz-sub-heading,
 .quiz-heading {
+  margin-bottom: 10px !important;
+  font-size: 24px !important;
+  font-weight: 500;
+}
+.quiz-sub-heading {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+}
+.quiz-heading {
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+.question {
   margin: 0 !important;
   font-size: 18px;
   font-family: "Work Sans", sans-serif;

@@ -435,9 +435,10 @@
                                 </div>
                                 <div class="tm-testimonial-content">
                                     <div class="tm-videobutton">
-                                        <a data-fancybox href="https://www.youtube.com/watch?v=dQgM2wF7fMo">
+                                        <!-- <a data-fancybox href="https://www.youtube.com/watch?v=dQgM2wF7fMo">
                                             <span><i class="flaticon-play-button"></i></span>
-                                        </a>
+                                        </a> -->
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/Nbw94egem54" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                     </div>
                                     <div class="tm-rating">
                                         <span class="active"><i class="zmdi zmdi-star"></i></span>
@@ -465,9 +466,10 @@
                                 </div>
                                 <div class="tm-testimonial-content">
                                     <div class="tm-videobutton">
-                                        <a data-fancybox href="https://www.youtube.com/watch?v=dQgM2wF7fMo">
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/Nbw94egem54" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                        <!-- <a data-fancybox href="https://www.youtube.com/watch?v=dQgM2wF7fMo">
                                             <span><i class="flaticon-play-button"></i></span>
-                                        </a>
+                                        </a> -->
                                     </div>
                                     <div class="tm-rating">
                                         <span class="active"><i class="zmdi zmdi-star"></i></span>
@@ -494,12 +496,12 @@
                                     </div>
                                 </div>
                                 <div class="tm-testimonial-content">
-                                    <!-- <div class="tm-videobutton"> -->
-                                        <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/Tyj-mFtKwjM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-                                    <!-- </div> -->
-                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio ipsum tempora magni corporis fugit mollitia accusamus labore, exercitationem sunt alias minus, nisi cumque, explicabo impedit culpa inventore dolor. Architecto, 
+                                    <div class="tm-videobutton">
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/Nbw94egem54" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </div>
+                                    <!-- <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio ipsum tempora magni corporis fugit mollitia accusamus labore, exercitationem sunt alias minus, nisi cumque, explicabo impedit culpa inventore dolor. Architecto, 
                                         hic.
-                                    </p>
+                                    </p> -->
                                     <div class="tm-rating">
                                         <span class="active"><i class="zmdi zmdi-star"></i></span>
                                         <span class="active"><i class="zmdi zmdi-star"></i></span>
@@ -544,17 +546,31 @@
                         </div> -->
                         <div class="tm-information main-test__block">
                             <h2 class="test-block mt-50 mb-50" style="font-size: 40px;">
-                                <button class="tm-button tm-button-dark m-auto" id="test-btn">Тест отуу</button>
+                                <button class="tm-button tm-button-dark m-auto" id="test-btn" style="background-color: #0075b7 !important; border: #0075b7;">Тест отуу</button>
                             </h2>
                             <div class="d-none form-block">
                                 <form id="myForm" class="form-submit" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdT4xZIofpeb424fRm9sayqmc1nu30XBn2IBJDb_MkLbZz57g/formResponse" onsubmit="handleSubmit(event)">
                                 <div class="form-group">
                                   <label for="exampleInputEmail1">Сиздин атыныз</label>
-                                  <input id="name-inp" type="text" name="entry.1730801015" class="form-control" aria-describedby="emailHelp" placeholder="Ваше имя">
+                                  <input 
+                                    id="name-inp" 
+                                    type="text" 
+                                    name="entry.1730801015" 
+                                    class="form-control text-center" 
+                                    aria-describedby="emailHelp" 
+                                    placeholder="Ваше имя" 
+                                    autocomplete="off">
                                 </div>
                                 <div class="form-group">
                                   <label for="exampleInputPassword1">Сиздин номериниз</label>
-                                  <input id="password-inp" type="tel" name="entry.208667473" class="form-control" id="exampleInputPassword1" placeholder="Номер телефона">
+                                  <input 
+                                    id="password-inp" pattern="\+996\s?[0-9]{3}[0-9]{3}[0-9]{3}|\0?[0-9]{3}[0-9]{3}[0-9]{4}" 
+                                    type="tel" 
+                                    name="entry.208667473" 
+                                    class="form-control text-center" 
+                                    id="exampleInputPassword1" 
+                                    placeholder="+996778307575" 
+                                    autocomplete="off">
                                 </div>
                                 <button type="submit" class="tm-button send-btn">Жонотуу</button>
                                 </form>
