@@ -94,8 +94,8 @@ button:hover {
   z-index: 2;
 }
 .quiz-container {
-  position: relative;
-  height: 200px;
+  /* position: relative;
+  height: 200px; */
   margin-top: 40px;
 }
 
