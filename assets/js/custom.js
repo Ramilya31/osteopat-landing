@@ -76,17 +76,17 @@ function renderQuiz(){
   quizContainer.innerHTML = `
     <h2>${form.title}<h2>
     ${currentQuestion===RESULT ? (`
-      <p>Сумма всех ДА: ${form.questions.map(a=>a.chlidren).flat().reduce((a,b)=>a+(b.answer===1?1:0),0)}</p>
-      <p>Сумма всех НЕТ: ${form.questions.map(a=>a.chlidren).flat().reduce((a,b)=>a+(b.answer===0?1:0),0)}</p>
-      <p>${form.resultDescription}</p>
+      <p class="user-answ">Сумма всех ДА: ${form.questions.map(a=>a.chlidren).flat().reduce((a,b)=>a+(b.answer===1?1:0),0)}</p>
+      <p class="user-answ">Сумма всех НЕТ: ${form.questions.map(a=>a.chlidren).flat().reduce((a,b)=>a+(b.answer===0?1:0),0)}</p>
+      <p class="user-message">${form.resultDescription}</p>
     `): currentQuestion===PREVIEW ? (`
-      ${form.subTitle ? `<p>${form.subTitle}</p>` : ``}
+      ${form.subTitle ? `<p class="test-subtitle">${form.subTitle}</p>` : ``}
     `):(`
     ${form.questions[currentQuestion].title ? `<p>${form.questions[currentQuestion].title}</p>`: ``}
     ${form.questions[currentQuestion].subTitle ? `<p>${form.questions[currentQuestion].subTitle}</p>`: ``}
       ${form.questions[currentQuestion].chlidren.map((i, index)=>(`
-        <p>${i.title}</p>
-        <form>
+        <p class="test-title">${i.title}</p>
+        <form class="test-form">
           <input 
             type="checkbox" 
             onclick='handleCheckbox(${JSON.stringify({
@@ -99,11 +99,11 @@ function renderQuiz(){
             class="test-input" 
             ${i.answer===1 ? `checked`:``}
           />
-          <label for="test-${currentForm}-${currentQuestion}-${index}-1">
-              ДА
+          <label class="test-answer" for="test-${currentForm}-${currentQuestion}-${index}-1">
+              Да
           </label>
         </form>
-        <form>
+        <form class="test-form">
           <input 
             type="checkbox" 
             onclick='handleCheckbox(${JSON.stringify({
@@ -116,13 +116,121 @@ function renderQuiz(){
             class="test-input" 
             ${i.answer===0 ? `checked`:``}
           />
-          <label for="test-${currentForm}-${currentQuestion}-${index}-0">
-              НЕТ
+          <label class="test-answer" for="test-${currentForm}-${currentQuestion}-${index}-0">
+              Нет
           </label>
         </form>
       `)).join("")}
     `)}
   `
+}
+
+if(document.querySelector("#kgz")){
+  const quizContainer = document.getElementById('quiz');
+  const btnPrev = document.getElementById('previous');
+  const btnNext = document.getElementById('next');
+  const btnSubmit = document.getElementById('submit');
+
+  const PREVIEW = 'PREVIEW';
+  const RESULT = 'RESULT';
+
+  btnNext.addEventListener('click',function(e){
+    if(currentQuestion===RESULT){
+      currentForm+=1;
+      currentQuestion=PREVIEW;
+    }else if(currentQuestion===PREVIEW){
+      currentQuestion=0;
+    }else if(currentQuestion>=QUIZ_DATA2.forms[currentForm].questions.length-1){
+      currentQuestion = RESULT
+    }else{
+      currentQuestion+=1;
+    }
+    renderQuiz();
+  })
+  btnPrev.addEventListener('click',function(e){
+    if(currentQuestion<=0){
+      currentQuestion=PREVIEW;
+    }else if(currentQuestion===PREVIEW && currentForm>0){
+      currentQuestion=RESULT;
+      currentForm-=1;
+    }else if(currentQuestion===RESULT){
+      currentQuestion=QUIZ_DATA2.forms[currentForm].questions.length-1;
+    }else{
+      currentQuestion-=1;
+    }
+    renderQuiz();
+  })
+
+  let currentForm = 0;
+  let currentQuestion = PREVIEW;
+
+  function handleCheckbox({form:f, question:q, index:i, mode:m}){
+    QUIZ_DATA2.forms[f].questions[q].chlidren[i].answer=m;
+    renderQuiz();
+  }
+
+  function renderQuiz(){
+    const form = QUIZ_DATA2.forms[currentForm];
+    btnPrev.hidden = currentQuestion==PREVIEW && currentForm==0;
+    btnNext.hidden = currentForm >= QUIZ_DATA2.forms.length && currentQuestion >= form.questions.length;
+    btnSubmit.hidden = !(currentForm >= QUIZ_DATA2.forms.length && currentQuestion >= form.questions.length)
+    if(currentQuestion===PREVIEW){
+      btnNext.hidden=false;
+    }
+    if(currentForm>=QUIZ_DATA2.forms.length){
+      btnNext.hidden=true;
+    }
+    quizContainer.innerHTML = `
+      <h2>${form.title}<h2>
+      ${currentQuestion===RESULT ? (`
+        <p class="user-answ">Ооба (бардыгы): ${form.questions.map(a=>a.chlidren).flat().reduce((a,b)=>a+(b.answer===1?1:0),0)}</p>
+        <p class="user-answ">Жок (бардыгы): ${form.questions.map(a=>a.chlidren).flat().reduce((a,b)=>a+(b.answer===0?1:0),0)}</p>
+        <p class="user-message">${form.resultDescription}</p>
+      `): currentQuestion===PREVIEW ? (`
+        ${form.subTitle ? `<p class="test-subtitle">${form.subTitle}</p>` : ``}
+      `):(`
+      ${form.questions[currentQuestion].title ? `<p>${form.questions[currentQuestion].title}</p>`: ``}
+      ${form.questions[currentQuestion].subTitle ? `<p>${form.questions[currentQuestion].subTitle}</p>`: ``}
+        ${form.questions[currentQuestion].chlidren.map((i, index)=>(`
+          <p class="test-title">${i.title}</p>
+          <form class="test-form">
+            <input 
+              type="checkbox" 
+              onclick='handleCheckbox(${JSON.stringify({
+                form: currentForm, 
+                question:currentQuestion,
+                index: index,
+                mode: 1
+              })})' 
+              id="test-${currentForm}-${currentQuestion}-${index}-1" 
+              class="test-input" 
+              ${i.answer===1 ? `checked`:``}
+            />
+            <label class="test-answer" for="test-${currentForm}-${currentQuestion}-${index}-1">
+                Ооба
+            </label>
+          </form>
+          <form class="test-form">
+            <input 
+              type="checkbox" 
+              onclick='handleCheckbox(${JSON.stringify({
+                form: currentForm, 
+                question:currentQuestion,
+                index: index,
+                mode: 0
+              })})' 
+              id="test-${currentForm}-${currentQuestion}-${index}-0" 
+              class="test-input" 
+              ${i.answer===0 ? `checked`:``}
+            />
+            <label class="test-answer" for="test-${currentForm}-${currentQuestion}-${index}-0">
+                Жок
+            </label>
+          </form>
+        `)).join("")}
+      `)}
+    `
+  }
 }
 
 

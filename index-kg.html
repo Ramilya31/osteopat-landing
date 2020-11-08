@@ -549,41 +549,34 @@
                                 <button class="tm-button tm-button-dark m-auto" id="test-btn" style="background-color: #0075b7 !important; border: #0075b7;">Тест отуу</button>
                             </h2>
                             <div class="d-none form-block">
-                                <form id="myForm" class="form-submit" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdT4xZIofpeb424fRm9sayqmc1nu30XBn2IBJDb_MkLbZz57g/formResponse" onsubmit="handleSubmit(event)">
-                                <div class="form-group">
-                                  <label for="exampleInputEmail1">Сиздин атыныз</label>
-                                  <input 
-                                    id="name-inp" 
-                                    type="text" 
-                                    name="entry.1730801015" 
-                                    class="form-control text-center" 
-                                    aria-describedby="emailHelp" 
-                                    placeholder="Ваше имя" 
-                                    autocomplete="off">
-                                </div>
-                                <div class="form-group">
-                                  <label for="exampleInputPassword1">Сиздин номериниз</label>
-                                  <input 
-                                    id="password-inp" pattern="\+996\s?[0-9]{3}[0-9]{3}[0-9]{3}|\0?[0-9]{3}[0-9]{3}[0-9]{4}" 
-                                    type="tel" 
-                                    name="entry.208667473" 
-                                    class="form-control text-center" 
-                                    id="exampleInputPassword1" 
-                                    placeholder="+996778307575" 
-                                    autocomplete="off">
-                                </div>
-                                <button type="submit" class="tm-button send-btn">Жонотуу</button>
+                                <form id="myForm" class="form-submit"
+                                    action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScfTLAX4cl4TU1D-3v4WY99NvpmDiSZw-rIlYlKYYcP2QI5Dg/formResponse"
+                                    target="hidden_iframe" onsubmit="handleSubmit(event)">
+                                    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Введите ваше имя</label>
+                                        <input id="name-inp" type="text" name="entry.1201068633"
+                                            class="form-control text-center" aria-describedby="emailHelp"
+                                            placeholder="Ваше имя" autocomplete="off">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputPassword1">Ваш номер</label>
+                                        <input pattern="\+996\s?[0-9]{3}[0-9]{3}[0-9]{3}|\0?[0-9]{3}[0-9]{3}[0-9]{4}"
+                                            id="password-inp" type="tel" name="entry.604496827"
+                                            class="form-control text-center" id="exampleInputPassword1"
+                                            placeholder="+996777777777" autocomplete="off">
+                                    </div>
+                                    <button type="submit" class="tm-button send-btn">Отправить</button>
                                 </form>
                             </div>
                             <div class="quiz-form d-none">
-                                <h1>Тест</h1>
                                 <div class="quiz-container">
                                     <div id="quiz"></div>
                                 </div>
                                 <div class="mt-5 pagination-btns">
                                     <button id="previous" class="tm-button pagin-btn previous-btn">Бугачейинки суроо</button>
                                     <button id="next" class="tm-button pagin-btn next-btn">Кийинки суроо</button>
-                                    <button id="submit" class="tm-button pagin-btn submit-btn">Тестти бутуруу</button>
+                                    <button id="submit" class="tm-button pagin-btn submit-btn">Закончить тест</button>
                                 </div>
                                 <div id="results"></div>
                             </div>
@@ -756,6 +749,7 @@
     </div>
 
     <!-- Js Files -->
+    <script src="./assets/js/data.js"></script>
     <script src="./assets/js/modernizr-3.6.0.min.js"></script>
     <script src="./assets/js/jquery.min.js"></script>
     <script src="./assets/js/popper.min.js"></script>
