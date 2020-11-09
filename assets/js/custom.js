@@ -96,8 +96,7 @@ function renderQuiz(){
     `): currentQuestion===PREVIEW ? (`
       ${form.subTitle ? `<p class="test-subtitle">${form.subTitle}</p>` : ``}
     `):(`
-    ${form.questions[currentQuestion].title ? `<p>${form.questions[currentQuestion].title}</p>`: ``}
-    ${form.questions[currentQuestion].subTitle ? `<p>${form.questions[currentQuestion].subTitle}</p>`: ``}
+    ${form.questions[currentQuestion].title ? `<p class="test-title">${form.questions[currentQuestion].title}</p>`: ``}
       ${form.questions[currentQuestion].chlidren.map((i, index)=>(`
         <p class="test-title">${i.title}</p>
         <form class="test-form">
@@ -135,6 +134,7 @@ function renderQuiz(){
           </label>
         </form>
       `)).join("")}
+      ${form.questions[currentQuestion].subTitle ? `<p class="test-title">${form.questions[currentQuestion].subTitle}</p>`: ``}
     `)}
   `
 }
@@ -197,11 +197,11 @@ if(document.querySelector("#kgz")){
     btnNext.hidden = currentForm >= QUIZ_DATA2.forms.length && currentQuestion >= form.questions.length;
     // btnSubmit.hidden = !(currentForm >= QUIZ_DATA2.forms.length && currentQuestion >= form.questions.length)
     btnSubmit.hidden = currentForm===RESULT;
-  if(currentQuestion!==PREVIEW && currentQuestion!==RESULT && !form.questions[currentQuestion].chlidren.reduce( (a,b)=>(a && b.answer!==null),true)){
-    btnNext.classList.add("btn-disabled");
-  }else{
-    btnNext.classList.remove("btn-disabled");
-  }
+    // if(currentQuestion!==PREVIEW && currentQuestion!==RESULT && !form.questions[currentQuestion].chlidren.reduce( (a,b)=>(a && b.answer!==null),true)){
+    //   btnNext.classList.add("btn-disabled");
+    // }else{
+    //   btnNext.classList.remove("btn-disabled");
+    // }
     if(currentQuestion===PREVIEW){
       btnNext.hidden=false;
     }
@@ -217,8 +217,7 @@ if(document.querySelector("#kgz")){
       `): currentQuestion===PREVIEW ? (`
         ${form.subTitle ? `<p class="test-subtitle">${form.subTitle}</p>` : ``}
       `):(`
-      ${form.questions[currentQuestion].title ? `<p>${form.questions[currentQuestion].title}</p>`: ``}
-      ${form.questions[currentQuestion].subTitle ? `<p>${form.questions[currentQuestion].subTitle}</p>`: ``}
+      ${form.questions[currentQuestion].title ? `<p class="test-title">${form.questions[currentQuestion].title}</p>`: ``}
         ${form.questions[currentQuestion].chlidren.map((i, index)=>(`
           <p class="test-title">${i.title}</p>
           <form class="test-form">
@@ -256,6 +255,7 @@ if(document.querySelector("#kgz")){
             </label>
           </form>
         `)).join("")}
+        ${form.questions[currentQuestion].subTitle ? `<p class="test-title">${form.questions[currentQuestion].subTitle}</p>`: ``}
       `)}
     `
   }

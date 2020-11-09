@@ -113,6 +113,7 @@ button:hover {
 
 #quiz > h2 {
   line-height: 30px !important;
+  font-size: 25px;
 }
 
 .test-title,
@@ -164,6 +165,6 @@ button:hover {
   }
 }
 
-.btn-disabled{
-  opacity: .8;
+.btn-disabled {
+  opacity: 0.8;
 }
