@@ -163,3 +163,7 @@ button:hover {
     font-size: 15px !important;
   }
 }
+
+.btn-disabled{
+  opacity: .8;
+}

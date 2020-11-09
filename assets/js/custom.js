@@ -27,7 +27,15 @@ const btnSubmit = document.getElementById('submit');
 const PREVIEW = 'PREVIEW';
 const RESULT = 'RESULT';
 
+btnSubmit.addEventListener('click', function(e){
+  currentQuestion = RESULT;
+  renderQuiz();
+})
+
 btnNext.addEventListener('click',function(e){
+  if(btnNext.classList.contains("btn-disabled")){
+    return;
+  }
   if(currentQuestion===RESULT){
     currentForm+=1;
     currentQuestion=PREVIEW;
@@ -66,7 +74,13 @@ function renderQuiz(){
   const form = QUIZ_DATA.forms[currentForm];
   btnPrev.hidden = currentQuestion==PREVIEW && currentForm==0;
   btnNext.hidden = currentForm >= QUIZ_DATA.forms.length && currentQuestion >= form.questions.length;
-  btnSubmit.hidden = !(currentForm >= QUIZ_DATA.forms.length && currentQuestion >= form.questions.length)
+  // btnSubmit.hidden = !(currentForm >= QUIZ_DATA.forms.length && currentQuestion >= form.questions.length)
+  btnSubmit.hidden = currentForm===RESULT;
+  if(currentQuestion!==PREVIEW && currentQuestion!==RESULT && !form.questions[currentQuestion].chlidren.reduce( (a,b)=>(a && b.answer!==null),true)){
+    btnNext.classList.add("btn-disabled");
+  }else{
+    btnNext.classList.remove("btn-disabled");
+  }
   if(currentQuestion===PREVIEW){
     btnNext.hidden=false;
   }
@@ -134,7 +148,15 @@ if(document.querySelector("#kgz")){
   const PREVIEW = 'PREVIEW';
   const RESULT = 'RESULT';
 
+  btnSubmit.addEventListener('click', function(e){
+    currentQuestion = RESULT;
+    renderQuiz();
+  })
+
   btnNext.addEventListener('click',function(e){
+    if(btnNext.classList.contains("btn-disabled")){
+      return;
+    }
     if(currentQuestion===RESULT){
       currentForm+=1;
       currentQuestion=PREVIEW;
@@ -173,7 +195,13 @@ if(document.querySelector("#kgz")){
     const form = QUIZ_DATA2.forms[currentForm];
     btnPrev.hidden = currentQuestion==PREVIEW && currentForm==0;
     btnNext.hidden = currentForm >= QUIZ_DATA2.forms.length && currentQuestion >= form.questions.length;
-    btnSubmit.hidden = !(currentForm >= QUIZ_DATA2.forms.length && currentQuestion >= form.questions.length)
+    // btnSubmit.hidden = !(currentForm >= QUIZ_DATA2.forms.length && currentQuestion >= form.questions.length)
+    btnSubmit.hidden = currentForm===RESULT;
+  if(currentQuestion!==PREVIEW && currentQuestion!==RESULT && !form.questions[currentQuestion].chlidren.reduce( (a,b)=>(a && b.answer!==null),true)){
+    btnNext.classList.add("btn-disabled");
+  }else{
+    btnNext.classList.remove("btn-disabled");
+  }
     if(currentQuestion===PREVIEW){
       btnNext.hidden=false;
     }
