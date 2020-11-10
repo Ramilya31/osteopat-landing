@@ -1965,24 +1965,24 @@ button.tm-videobutton::after {
   border-radius: 999px;
 }
 
-/* .tm-videobutton::before,
+.tm-videobutton::before,
 a.tm-videobutton::before,
 button.tm-videobutton::before {
   background: rgba(255, 255, 255, 0.5);
   z-index: -1;
   -webkit-animation: tmGrowShrink 1.2s ease-in-out 0s infinite both;
   animation: tmGrowShrink 1.2s ease-in-out 0s infinite both;
-} */
+}
 
-/* .tm-videobutton::after,
+.tm-videobutton::after,
 a.tm-videobutton::after,
 button.tm-videobutton::after {
   z-index: -2;
   -webkit-animation: tmGrowShrink 1.2s ease-in-out 0.3s infinite both;
   animation: tmGrowShrink 1.2s ease-in-out 0.3s infinite both;
-} */
+}
 
-/* .tm-videobutton span,
+.tm-videobutton span,
 a.tm-videobutton span,
 button.tm-videobutton span {
   display: inline-block;
@@ -1996,7 +1996,7 @@ button.tm-videobutton span {
   -webkit-transition: all 0.3s ease-in-out 0s;
   -o-transition: all 0.3s ease-in-out 0s;
   transition: all 0.3s ease-in-out 0s;
-} */
+}
 
 .tm-videobutton span i,
 a.tm-videobutton span i,
