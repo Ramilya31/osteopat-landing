@@ -148,6 +148,10 @@ button:hover {
 }
 
 @media (max-width: 570px) {
+  .iframe-video {
+    width: 300px;
+    height: 200px;
+  }
   .question {
     font-size: 18px !important;
   }
