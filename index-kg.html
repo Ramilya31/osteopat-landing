@@ -580,13 +580,13 @@
                                     <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Сиздин атыныз</label>
-                                        <input required id="name-inp" type="text" name="entry.1201068633"
+                                        <input required oninvalid="this.setCustomValidity('Сураныч, атынызды жазыныз')" oninput="setCustomValidity('')" id="name-inp" type="text" name="entry.1201068633"
                                             class="form-control text-center" aria-describedby="emailHelp"
                                             placeholder="Сиздин атыныз" autocomplete="off">
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputPassword1">Сиздин номурунуз</label>
-                                        <input required pattern="\+996\s?[0-9]{3}[0-9]{3}[0-9]{3}|\0?[0-9]{3}[0-9]{3}[0-9]{4}"
+                                        <input required oninvalid="this.setCustomValidity('Сураныч, номурунузду жазыныз')" oninput="setCustomValidity('')" pattern="\+996\s?[0-9]{3}[0-9]{3}[0-9]{3}|\0?[0-9]{3}[0-9]{3}[0-9]{4}"
                                             id="password-inp" type="tel" name="entry.604496827"
                                             class="form-control text-center" id="exampleInputPassword1"
                                             placeholder="+996777777777" autocomplete="off">
