@@ -137,3 +137,4 @@ function renderQuiz(){
       ${form.questions[currentQuestion].subTitle ? `<p class="test-title">${form.questions[currentQuestion].subTitle}</p>`: ``}
     `)}
   `
+}
