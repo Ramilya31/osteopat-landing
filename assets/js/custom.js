@@ -73,7 +73,7 @@ function handleCheckbox({form:f, question:q, index:i, mode:m}){
 function renderQuiz(){
   const form = QUIZ_DATA.forms[currentForm];
   btnPrev.hidden = currentQuestion==PREVIEW && currentForm==0;
-  btnNext.hidden = currentForm >= QUIZ_DATA.forms.length && currentQuestion >= form.questions.length;
+  btnNext.hidden = currentForm >= QUIZ_DATA.forms.length-1 && currentQuestion === RESULT;
   // btnSubmit.hidden = !(currentForm >= QUIZ_DATA.forms.length && currentQuestion >= form.questions.length)
   btnSubmit.hidden = currentForm===RESULT;
   if(currentQuestion!==PREVIEW && currentQuestion!==RESULT && !form.questions[currentQuestion].chlidren.reduce( (a,b)=>(a && b.answer!==null),true)){
@@ -137,4 +137,3 @@ function renderQuiz(){
       ${form.questions[currentQuestion].subTitle ? `<p class="test-title">${form.questions[currentQuestion].subTitle}</p>`: ``}
     `)}
   `
-}
